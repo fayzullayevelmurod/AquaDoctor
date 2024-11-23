@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+span, label {
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-Inter;
+  font-style: normal;
+  font-display: swap;
+}
+
+input, textarea {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: calc(1440px);
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: calc(100% - 32px);
+  }
+}
+
+.section-top {
+  margin-top: 160px;
+
+  @include desktop {
+    margin-top: 80px;
+  }
+}
+
+.main_title {
+  font-family: $font-Raleway;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 47px;
+
+  &_dark {
+    color: $color-dark;
+  }
+
+  &_white {
+    color: $color-white;
+  }
+}
+
