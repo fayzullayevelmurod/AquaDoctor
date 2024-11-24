@@ -83,3 +83,136 @@ address {
   }
 }
 
+.btn_large {
+
+  &_green {
+    background-color: $color-green-light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 249px;
+    gap: 10px;
+    transition: .3s linear;
+    border-radius: 24px;
+    padding: 16px 32px;
+
+    span {
+      font-family: $font-Raleway;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $color-white;
+    }
+
+    img {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+    }
+
+    &:hover {
+      background-color: $color-green-light-20;
+    }
+  }
+
+  &.disabled {
+    background-color: #D9D9D9;
+  }
+
+  &_dark {
+    background-color: $color-green-dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 249px;
+    gap: 10px;
+    transition: .3s linear;
+    border-radius: 24px;
+    padding: 16px 32px;
+
+    span {
+      font-family: $font-Raleway;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $color-white;
+    }
+
+    img {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+    }
+
+    &:hover {
+      background-color: $color-grey-dark-20;
+    }
+  }
+}
+
+.btn_medium {
+  &_green {
+    background-color: $color-green-light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 252px;
+    gap: 4px;
+    transition: .3s linear;
+    border-radius: 16px;
+    padding: 19px 32px;
+
+    span {
+      font-family: $font-Raleway;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $color-white;
+    }
+
+    img {
+      flex-shrink: 0;
+      width: 24px;
+      width: 24px;
+    }
+
+    &:hover {
+      background-color: $color-green-light-20;
+    }
+  }
+
+  &.disabled {
+    background-color: #D9D9D9;
+  }
+
+  &_dark {
+    background-color: $color-green-dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 252px;
+    gap: 4px;
+    transition: .3s linear;
+    border-radius: 16px;
+    padding: 19px 32px;
+
+    span {
+      font-family: $font-Raleway;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $color-white;
+    }
+
+    img {
+      flex-shrink: 0;
+      width: 24px;
+      width: 24px;
+    }
+
+    &:hover {
+      background-color: $color-grey-dark-20;
+    }
+  }
+}
+
