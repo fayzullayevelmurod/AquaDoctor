@@ -1,0 +1,21 @@
+.home {
+  background-image: url('../../images/home_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &_img {
+    border-radius: 32px;
+    overflow: hidden;
+    width: 434px;
+    height: 584px;
+    position: relative;
+
+    button {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+
+      
+    }
+  }
+}

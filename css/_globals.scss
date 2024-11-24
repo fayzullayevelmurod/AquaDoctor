@@ -55,7 +55,7 @@ address {
   max-width: calc(1440px);
   margin: 0 auto;
 
-  @include tablet {
+  @include desktop-big {
     max-width: calc(100% - 32px);
   }
 }
