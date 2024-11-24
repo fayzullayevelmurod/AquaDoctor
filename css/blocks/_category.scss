@@ -1,5 +1,6 @@
 .category {
   padding: 100px 0;
+  background-color: $color-white;
 
   @include desktop-two() {
     padding: 70px 0;

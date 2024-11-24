@@ -27,6 +27,7 @@ body {
   font-family: $font-Inter;
   font-style: normal;
   font-display: swap;
+  background-color: #EEEFF0;
 }
 
 input, textarea {
@@ -219,5 +220,18 @@ address {
       background-color: $color-grey-dark-20;
     }
   }
+}
+
+.main_input {
+  font-family: $font-Inter;
+  display: block;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  padding: 16px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: $color-grey;
+  background-color: $color-white;
 }
 
