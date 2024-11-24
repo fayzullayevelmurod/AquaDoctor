@@ -960,6 +960,170 @@ address {
   }
 }
 
+.recommendation {
+  padding: 120px 0;
+}
+@media (max-width: 1023px) {
+  .recommendation {
+    padding: 40px 0;
+  }
+}
+.recommendation .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1500px) {
+  .recommendation .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.recommendation p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+  margin: 16px 0 32px 0;
+}
+@media (max-width: 1023px) {
+  .recommendation p {
+    margin: 16px 0;
+  }
+}
+.recommendation_img {
+  width: 345px;
+  flex-shrink: 0;
+}
+.recommendation_img img {
+  width: 345px;
+  border-radius: 32px;
+}
+.recommendation_content {
+  max-width: 1075px;
+}
+.recommendation_blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 16px;
+}
+@media (max-width: 1023px) {
+  .recommendation_blocks {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.recommendation_block {
+  border-radius: 24px;
+  padding: 16px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 1023px) {
+  .recommendation_block {
+    border-radius: 16px;
+    padding: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.recommendation_block img {
+  flex-shrink: 0;
+}
+@media (max-width: 1023px) {
+  .recommendation_block img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.recommendation_block span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+}
+@media (max-width: 1023px) {
+  .recommendation_block span {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+.recommendation .one {
+  max-width: 428px;
+}
+@media (max-width: 1023px) {
+  .recommendation .one {
+    max-width: 100%;
+    order: 7;
+  }
+}
+.recommendation .two {
+  max-width: 320px;
+}
+@media (max-width: 1023px) {
+  .recommendation .two {
+    max-width: 100%;
+    order: 4;
+  }
+}
+.recommendation .three {
+  max-width: 272px;
+}
+@media (max-width: 1023px) {
+  .recommendation .three {
+    max-width: 100%;
+    order: 3;
+  }
+}
+.recommendation .four {
+  max-width: 381px;
+}
+@media (max-width: 1023px) {
+  .recommendation .four {
+    max-width: 100%;
+    order: 2;
+  }
+}
+.recommendation .five {
+  max-width: 356px;
+}
+@media (max-width: 1023px) {
+  .recommendation .five {
+    max-width: 100%;
+    order: 6;
+  }
+}
+.recommendation .six {
+  max-width: 283px;
+}
+@media (max-width: 1023px) {
+  .recommendation .six {
+    max-width: 100%;
+    order: 5;
+  }
+}
+.recommendation .seven {
+  max-width: 351px;
+}
+@media (max-width: 1023px) {
+  .recommendation .seven {
+    max-width: 100%;
+    order: 1;
+  }
+}
+.recommendation .eight {
+  max-width: 630px;
+}
+@media (max-width: 1023px) {
+  .recommendation .eight {
+    max-width: 100%;
+    order: 8;
+  }
+}
+
 .footer {
   background-color: #3C7582;
   padding: 64px 0;
