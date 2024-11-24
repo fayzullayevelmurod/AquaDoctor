@@ -74,6 +74,11 @@ address {
   font-weight: 700;
   line-height: 47px;
 
+  @include desktop() {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
   &_dark {
     color: $color-dark;
   }
