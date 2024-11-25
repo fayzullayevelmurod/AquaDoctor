@@ -12,25 +12,29 @@ navClose.addEventListener('click', () => {
 
 
 
-var swiper = new Swiper(".treatmentsSwiper", {
-  slidesPerView: 1.10,
-  spaceBetween: 28,
+var swiper = new Swiper(".partnerSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".partner-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".partner-button-next",
+    prevEl: ".partner-button-prev",
+  },
   breakpoints: {
-    640: {
-      slidesPerView: 2.2,
-      spaceBetween: 28,
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     993: {
-      slidesPerView: 3.2,
-      spaceBetween: 28,
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     1200: {
-      slidesPerView: 3.6,
-      spaceBetween: 40,
+      slidesPerView: 3,
+      spaceBetween: 20,
     },
   },
 });
@@ -138,3 +142,21 @@ if (orderModalOpen) {
     orderModal.classList.remove('active');
   }
 }
+// const container = document.querySelector('.product .container');
+// document.querySelector('.product .slider').addEventListener('input', (e) => {
+//   container.style.setProperty('--position', `${e.target.value}%`);
+// })
+
+
+var divisor = document.getElementById("divisor"),
+    handle = document.getElementById("handle"),
+    slider = document.getElementById("slider");
+
+function moveDivisor() {
+  handle.style.left = slider.value+"%";
+	divisor.style.width = slider.value+"%";
+}
+
+window.onload = function() {
+	moveDivisor();
+};
