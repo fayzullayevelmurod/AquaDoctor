@@ -1406,6 +1406,7 @@ address {
   align-items: center;
   padding: 56.5px 0;
   overflow: hidden;
+  min-height: 300px;
 }
 @media (max-width: 1023px) {
   .service__item {
@@ -1414,6 +1415,7 @@ address {
     z-index: 1;
     padding: 16px;
     background: #FFF;
+    min-height: auto;
   }
   .service__item.active .bg-img {
     opacity: 1;

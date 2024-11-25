@@ -167,7 +167,7 @@ window.onload = function() {
 
 function maskPhone(input) {
   input.addEventListener("input", function () {
-    let value = input.value.replace(/\D/g, ""); 
+    let value = input.value.replace(/\D/g, "");
     let formatted = "+7 (";
 
     if (value.length > 1) formatted += value.substring(1, 4);

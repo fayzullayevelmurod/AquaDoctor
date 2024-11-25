@@ -16,6 +16,7 @@
         align-items: center;
         padding: 56.5px 0;
         overflow: hidden;
+        min-height: 300px;
 
         @include tablet {
             flex-direction: column;
@@ -23,6 +24,7 @@
             z-index: 1;
             padding: 16px;
             background: #FFF;
+            min-height: auto;
 
             &.active {
                 .bg-img {
