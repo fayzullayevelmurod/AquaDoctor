@@ -114,12 +114,12 @@ if (serviceItem.length) {
     const header = el.querySelector('h3');
     const content = el.querySelector('.service__item_body');
     
-    if (window.innerWidth <= 1023) {
-      header.addEventListener('click', () => {
-        el.classList.toggle('active');
-        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    header.addEventListener('click', () => {
+        if (window.innerWidth <= 1023) {
+          el.classList.toggle('active');
+          content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+        }
       });
-    }
 
   })
 }
