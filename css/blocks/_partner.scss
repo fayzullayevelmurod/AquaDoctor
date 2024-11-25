@@ -1,0 +1,136 @@
+.partner {
+  margin-top: 120px;
+
+  @include desktop() {
+    margin-top: 40px;
+  }
+
+  &_title {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 48px;
+
+    @include tablet() {
+      margin-bottom: 24px;
+    }
+  }
+
+  &_slider_btn {
+    display: none;
+    align-items: center;
+    gap: 10px;
+
+    @include desktop() {
+      display: flex;
+    }
+
+    .slider_btn {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      background-color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 4px 8px 0px #0000000D;
+      transition: .3s linear;
+
+      &:hover {
+        background-color: #5A5A5A;
+        box-shadow: none;
+
+        svg {
+          path {
+            fill: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &-pagination {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: $color-line;
+      margin: 0 !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $color-dark;
+    }
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    align-items: stretch;
+
+    &_img {
+      border-radius: 32px;
+      overflow: hidden;
+      min-height: 236px;
+
+      @include mobile-s() {
+        min-height: 181px;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 236px;
+
+        @include mobile-s() {
+          height: 181px;
+        }
+      }
+    }
+
+    &_text {
+      height: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: $color-white;
+
+      @include mobile-s() {
+        padding: 16px;
+      }
+
+      h6 {
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-dark;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $color-grey-light;
+      }
+    }
+  }
+}
