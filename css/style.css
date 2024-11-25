@@ -2123,11 +2123,14 @@ address {
 }
 @media (max-width: 1023px) {
   .product .main_title {
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    max-width: 272px;
   }
 }
 .product_block {
-  height: 553px;
   max-width: 1196px;
   margin: 0 auto;
   overflow: hidden;
@@ -2137,19 +2140,35 @@ address {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 553px;
 }
 .product_block figure {
-  position: absolute;
-  background-image: url("../../images/product_two.png");
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 553px;
   margin: 0;
 }
+.product_block .bg-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.product_block .bg-2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: calc(100% - 4px);
+  min-width: 1196px;
+  width: 1196px;
+}
+@media (max-width: 1228px) {
+  .product_block .bg-2 {
+    min-width: calc(100vw - 32px);
+    width: calc(100vw - 32px);
+  }
+}
 .product_block #divisor {
-  background-image: url("../../images/product_one.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -2158,6 +2177,7 @@ address {
   box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
   bottom: 0;
   height: 100%;
+  overflow: hidden;
 }
 .product_block #divisor::before {
   content: "";
@@ -2210,6 +2230,7 @@ address {
   width: calc(100% + 50px);
   z-index: 4;
   height: 100%;
+  opacity: 0;
 }
 .product_block input[type=range]:focus, .product_block input[type=range]:active {
   border: none;

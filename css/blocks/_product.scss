@@ -20,12 +20,16 @@
     margin-bottom: 48px;
 
     @include tablet() {
-      margin-bottom: 24px;
+      margin: 0 auto 24px;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 34px;
+      max-width: 272px;
     }
   }
 
   &_block {
-    height: 553px;
+    // height: 553px;
     max-width: 1196px;
     margin: 0 auto;
     overflow: hidden;
@@ -35,28 +39,53 @@
       width: 100%;
       overflow: hidden;
       position: relative;
-      height: 553px;
+      // height: 553px;
     }
 
     figure {
-      position: absolute;
-      background-image: url('../../images/product_two.png');
+      position: relative;
+      // background-image: url('../../images/product_two.png');
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
-      height: 553px;
+      // height: 553px;
       margin: 0;
     }
 
+    .bg {
+      &-1 {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+      }
+
+      &-2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: calc(100% - 4px);
+        min-width: 1196px;
+        width: 1196px;
+
+        @media (max-width: 1228px) {
+          min-width: calc(100vw - 32px);
+          width: calc(100vw - 32px);
+        }
+      }
+    }
+
     #divisor {
-      background-image: url('../../images/product_one.png');
+      // background-image: url('../../images/product_one.png');
       background-size: cover;
       background-repeat: no-repeat;
       position: absolute;
       width: 50%;
       height: 553px;
       box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
-      bottom: 0; height: 100%;
+      bottom: 0; 
+      height: 100%;
+      overflow: hidden;
 
       &::before {
         content: '';
@@ -72,6 +101,7 @@
         border: 2px solid $color-green-dark;
       }
     }
+
     #handle {
       position: absolute;
       height: 50px;
@@ -112,6 +142,7 @@
       width: calc(100% + 50px);
       z-index: 4;
       height: 100%;
+      opacity: 0;
 
       &:focus,
       &:active {
