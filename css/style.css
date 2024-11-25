@@ -1175,16 +1175,26 @@ address {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.order__left a {
+.order__left .video_btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 @media (max-width: 1023px) {
-  .order__left a img {
+  .order__left .video_btn img {
     width: 40px;
   }
+}
+.order__left_in.active {
+  display: none;
+}
+.order__left .order_video {
+  display: none;
+  border-radius: 32px;
+}
+.order__left .order_video.active {
+  display: block;
 }
 .order__left h3 {
   font-family: "Raleway", sans-serif;
@@ -2205,7 +2215,7 @@ address {
   height: 50px;
   width: 50px;
   top: 50%;
-  left: 50%;
+  left: 23%;
   display: flex;
   align-items: center;
   justify-content: center;

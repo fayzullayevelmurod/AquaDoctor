@@ -10,7 +10,14 @@ navClose.addEventListener('click', () => {
   navMenu.classList.remove('active');
 })
 
+let video_btn = document.querySelector(".video_btn");
+let order_video = document.querySelector(".order_video");
+let order__left_in = document.querySelector(".order__left_in");
 
+video_btn.addEventListener('click', () => {
+  order_video.classList.add('active');
+  order__left_in.classList.add('active');
+})
 
 var swiper = new Swiper(".partnerSwiper", {
   slidesPerView: 1,
