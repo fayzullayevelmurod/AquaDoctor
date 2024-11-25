@@ -113,7 +113,11 @@ if (serviceItem.length) {
   serviceItem.forEach(el => {
     const header = el.querySelector('h3');
     const content = el.querySelector('.service__item_body');
-    
+
+    if (window.innerWidth <= 1023 && el.classList.contains('active')) {
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    }
+
     header.addEventListener('click', () => {
         if (window.innerWidth <= 1023) {
           el.classList.toggle('active');
@@ -160,3 +164,20 @@ function moveDivisor() {
 window.onload = function() {
 	moveDivisor();
 };
+
+function maskPhone(input) {
+  input.addEventListener("input", function () {
+    let value = input.value.replace(/\D/g, ""); 
+    let formatted = "+7 (";
+
+    if (value.length > 1) formatted += value.substring(1, 4);
+    if (value.length > 4) formatted += ") " + value.substring(4, 7);
+    if (value.length > 7) formatted += "-" + value.substring(7, 9);
+    if (value.length > 9) formatted += "-" + value.substring(9, 11);
+
+    input.value = formatted;
+  });
+}
+
+const phoneInputs = document.querySelectorAll(".phone-input");
+phoneInputs.forEach((input) => maskPhone(input));
