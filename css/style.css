@@ -934,6 +934,9 @@ address {
     line-height: 40px;
     margin-bottom: 16px;
   }
+  .home h1 br {
+    display: none;
+  }
 }
 .home .btn_medium_green {
   display: none;
@@ -1144,14 +1147,12 @@ address {
   width: 710px;
   height: 589px;
   flex-shrink: 0;
-  border-radius: 32px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   z-index: 1;
-  padding: 24px;
 }
 @media (max-width: 1200px) {
   .order__left {
@@ -1162,39 +1163,15 @@ address {
   .order__left {
     width: 100%;
     height: 240px;
-    padding: 24px 16px;
   }
-}
-.order__left .bg-img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.order__left .video_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@media (max-width: 1023px) {
-  .order__left .video_btn img {
-    width: 40px;
-  }
-}
-.order__left_in.active {
-  display: none;
 }
 .order__left .order_video {
-  display: none;
-  border-radius: 32px;
-}
-.order__left .order_video.active {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: contain;
   display: block;
+  aspect-ratio: 16/9;
 }
 .order__left h3 {
   font-family: "Raleway", sans-serif;
@@ -1412,6 +1389,9 @@ address {
   }
 }
 .service__item {
+  position: relative;
+}
+.service__item .container {
   display: flex;
   align-items: center;
   padding: 56.5px 0;
@@ -1419,29 +1399,39 @@ address {
   min-height: 300px;
 }
 @media (max-width: 1023px) {
-  .service__item {
+  .service__item .container {
     flex-direction: column;
     position: relative;
     z-index: 1;
     padding: 16px;
     background: #FFF;
     min-height: auto;
+    max-width: 100%;
   }
-  .service__item.active .bg-img {
+  .service__item .container.active .bg-img {
     opacity: 1;
   }
-  .service__item:not(.active) {
+  .service__item .container:not(.active) {
     box-shadow: 0 -26px 32px rgba(0, 0, 0, 0.05) inset;
   }
-  .service__item:first-child.active {
+  .service__item .container:first-child.active {
     border-radius: 24px 24px 0 0;
   }
-  .service__item:last-child.active {
+  .service__item .container:last-child.active {
     border-radius: 0 0 24px 24px;
   }
 }
 .service__item .bg-img {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease all;
 }
 @media (max-width: 1023px) {
   .service__item .bg-img {
@@ -1509,6 +1499,14 @@ address {
   .service__item a img {
     width: 40px;
   }
+}
+@media (max-width: 1023px) {
+  .service__item.active .bg-img {
+    opacity: 1;
+  }
+}
+.service__item:hover .bg-img {
+  opacity: 1;
 }
 
 .news {
@@ -1706,15 +1704,9 @@ address {
   }
 }
 
-.recommendation {
-  padding: 120px 0;
-}
-@media (max-width: 1023px) {
-  .recommendation {
-    padding: 40px 0;
-  }
-}
 .recommendation .container {
+  padding: 120px 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1724,6 +1716,11 @@ address {
   .recommendation .container {
     flex-direction: column;
     gap: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  .recommendation .container {
+    padding: 40px 0;
   }
 }
 .recommendation p {
@@ -1743,11 +1740,37 @@ address {
   flex-shrink: 0;
 }
 .recommendation_img img {
-  width: 345px;
+  position: absolute;
+  right: -80px;
+  bottom: 0;
+  width: 445px;
   border-radius: 32px;
+}
+@media (max-width: 1500px) {
+  .recommendation_img img {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 425px;
+  }
+}
+@media (max-width: 480px) {
+  .recommendation_img img {
+    width: 325px;
+  }
 }
 .recommendation_content {
   max-width: 1075px;
+}
+@media (max-width: 1500px) {
+  .recommendation_content {
+    padding-bottom: 485px;
+  }
+}
+@media (max-width: 480px) {
+  .recommendation_content {
+    padding-bottom: 370px;
+  }
 }
 .recommendation_blocks {
   display: flex;

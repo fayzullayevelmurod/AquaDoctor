@@ -1,11 +1,8 @@
 .recommendation {
-  padding: 120px 0;
-
-  @include tablet() {
-    padding: 40px 0;
-  }
 
   .container {
+    padding: 120px 0;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +11,10 @@
     @include desktop-big() {
       flex-direction: column;
       gap: 16px;
+    }
+
+    @include tablet() {
+      padding: 40px 0;
     }
   }
 
@@ -30,17 +31,40 @@
   }
 
   &_img {
+
     width: 345px;
     flex-shrink: 0;
 
     img {
-      width: 345px;
+      position: absolute;
+      right: -80px;
+      bottom: 0;
+      width: 445px;
       border-radius: 32px;
+
+      @include desktop-big() {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 425px;
+      }
+
+      @include mobile-s() {
+        width: 325px;
+      }
     }
   }
 
   &_content {
     max-width: 1075px;
+
+    @include desktop-big() {
+      padding-bottom: 485px;
+    }
+
+    @include mobile-s() {
+      padding-bottom: 370px;
+    }
   }
 
   &_blocks {
