@@ -19,6 +19,20 @@ navClose.addEventListener('click', () => {
 //   order__left_in.classList.add('active');
 // })
 
+// tab global
+document.querySelectorAll('.tab-btn').forEach((button) => {
+  button.addEventListener('click', () => {
+    const tabs = button.closest('.tabs');
+
+    tabs.querySelectorAll('.tab-btn').forEach((btn) => btn.classList.remove('active'));
+    tabs.querySelectorAll('.tab-content').forEach((content) => content.classList.remove('active'));
+
+    button.classList.add('active');
+    tabs.querySelector(`#${button.dataset.tab}`).classList.add('active');
+  });
+});
+// tab global
+
 var swiper = new Swiper(".partnerSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,

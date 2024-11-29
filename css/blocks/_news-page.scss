@@ -1,0 +1,45 @@
+.news_page {
+  &_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-bottom: 64px;
+
+    @include tablet() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s() {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &_card {
+    border-radius: 16px;
+    padding: 16px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    h6 {
+      font-family: $font-Raleway;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+      color: $color-dark;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      color: $color-grey-light;
+    }
+  }
+}
