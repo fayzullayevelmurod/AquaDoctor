@@ -1,4 +1,35 @@
 .news_page {
+  position: relative;
+
+  .breadcrumb {
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  .page_prev_btn {
+    display: none;
+
+    @include tablet() {
+      display: flex;
+    }
+  }
+
+  .main_title_page {
+
+    br {
+      display: none;
+    }
+
+    @include tablet() {
+      padding-top: 16px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
   &_cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,6 +56,12 @@
     img {
       width: 100%;
       border-radius: 16px;
+    }
+
+    .news_card_text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     h6 {

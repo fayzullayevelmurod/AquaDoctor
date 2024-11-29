@@ -475,3 +475,31 @@ address {
   }
 }
 // pagination
+
+// prev_btn
+.page_prev_btn {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: $color-white;
+  box-shadow: 0px 4px 8px 0px #0000000D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s linear;
+
+  &:hover {
+    background-color: $color-dark;
+
+    svg {
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}
+// prev_btn
