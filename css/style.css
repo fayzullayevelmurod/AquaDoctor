@@ -700,6 +700,12 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 120px;
+}
+@media (max-width: 1023px) {
+  .pagination {
+    display: none;
+  }
 }
 .pagination a {
   font-size: 16px;
@@ -710,9 +716,44 @@ address {
   border: 1px solid transparent;
   width: 32px;
   height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 .pagination a:hover {
   border: 1px solid #D9D9D9;
+}
+.pagination a:active {
+  background-color: #303030;
+  color: #FFFFFF;
+}
+.pagination a.active {
+  background-color: #303030;
+  color: #FFFFFF;
+}
+.pagination span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #757575;
+  transition: 0.3s linear;
+}
+.pagination .next {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  gap: 4px;
+  transition: 0.3s linear;
+  border: none;
+}
+.pagination .next:hover {
+  background-color: #F5F5F5;
+  border-radius: 1000px;
+  border: none;
 }
 
 .header {
