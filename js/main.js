@@ -101,49 +101,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // tab slider
 
-
 // count_block
-function toggleCountBlock(event) {
-  const cardBtn = event.target.closest('.card_btn');
-  const countBlock = cardBtn.nextElementSibling;
+let countBlock = document.querySelectorAll('.count_block');
+let addBtn = document.querySelectorAll('.card_btn');
 
-  if (countBlock && countBlock.classList.contains('count_block')) {
-    countBlock.classList.toggle('active');
-  }
-
-  cardBtn.classList.toggle('active');
+if(countBlock.length) {
+  addBtn.forEach((btn, btnID) => {
+    btn.onclick = () => {
+      btn.classList.add('active');
+      countBlock[btnID].classList.add('active');
+    }
+  })
+  countBlock.forEach((el, elID) => {
+    const plus = el.querySelector('.plus');
+    const minus = el.querySelector('.minus');
+    const countNumber = el.querySelector('span');
+    plus.onclick = () => {
+      countNumber.textContent = +countNumber.textContent + 1;
+    }
+    minus.onclick = () => {
+      if(+countNumber.textContent != 0) {
+        countNumber.textContent = +countNumber.textContent - 1;
+      } else {
+        if(addBtn.length) {
+          addBtn[elID].classList.remove('active');
+          el.classList.remove('active');
+        }
+      }
+    }
+  })
 }
-
-document.querySelectorAll('.card_btn').forEach(button => {
-  button.addEventListener('click', toggleCountBlock);
-});
 // count_block
-
-// count_plus_minus
-function updateCount(event) {
-  const countBlock = event.target.closest('.count_block');
-  if (!countBlock) return;
-
-  const span = countBlock.querySelector('span');
-  let count = parseInt(span.textContent, 10);
-
-  if (event.target.closest('.plus') && count < 99) {
-    count++;
-  }
-
-  if (event.target.closest('.minus') && count > 0) {
-    count--;
-  }
-
-  span.textContent = count;
-}
-
-document.querySelectorAll('.plus, .minus').forEach(button => {
-  button.addEventListener('click', updateCount);
-});
-// count_plus_minus
-
-
 
 // news tabs
 const newsSwp = document.querySelectorAll('.news .swp');

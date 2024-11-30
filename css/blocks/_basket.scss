@@ -119,6 +119,7 @@
       border-radius: 32px 32px 0 0;
       bottom: 0;
       top: auto;
+      box-shadow: 0px -8px 16px 0px #00000014;
     }
 
     &_in {
@@ -338,6 +339,11 @@
       height: auto;
       display: flex;
       width: auto;
+
+      span {
+        font-size: 18px;
+        line-height: 21px;
+      }
 
       @include tablet() {
         gap: 4px;
