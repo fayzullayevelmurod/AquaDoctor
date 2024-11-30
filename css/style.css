@@ -3055,6 +3055,28 @@ address {
 .basket {
   position: relative;
 }
+.basket .empty_text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+  margin-bottom: 64px;
+}
+@media (max-width: 1023px) {
+  .basket .empty_text {
+    text-align: center;
+  }
+}
+.basket .empty_brn {
+  width: 177px;
+  margin-bottom: 423px;
+}
+@media (max-width: 1023px) {
+  .basket .empty_brn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .basket .page_prev_btn {
   top: 20px;
   left: 16px;

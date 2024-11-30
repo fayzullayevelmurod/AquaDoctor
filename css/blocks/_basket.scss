@@ -1,6 +1,28 @@
 .basket {
   position: relative;
 
+  .empty_text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $color-grey-light;
+    margin-bottom: 64px;
+
+    @include tablet() {
+      text-align: center;
+    }
+  }
+
+  .empty_brn {
+    width: 177px;
+    margin-bottom: 423px;
+
+    @include tablet() {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
   .page_prev_btn {
     top: 20px;
     left: 16px;
