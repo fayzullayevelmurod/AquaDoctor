@@ -1,5 +1,24 @@
 .new_single {
+  position: relative;
+
+  .breadcrumb {
+    @include tablet() {
+      margin-left: 44px;
+      padding: 20px 0 16px 0;
+      flex-wrap: wrap;
+
+      &_end {
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
   &_content {
+    position: relative;
     max-width: 832px;
     background-color: $color-white;
     padding: 16px;
@@ -7,8 +26,27 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-bottom: 122px;
+    margin: 0 auto 122px auto;
 
+    @include tablet() {
+      gap: 16px;
+      position: static;
+      margin: 0 auto 40px auto;
+    }
+
+    @include mobile-s() {
+      margin: 0 4px 40px 4px;
+    }
+
+    .page_prev_btn {
+      top: 0;
+      left: -50px;
+
+      @include tablet() {
+        left: 16px;
+        top: 20px;
+      }
+    }
 
     img {
       border-radius: 16px;
@@ -20,6 +58,11 @@
       font-weight: 600;
       line-height: 38px;
       color: $color-dark;
+
+      @include tablet() {
+        font-size: 26px;
+        line-height: 34px;
+      }
     }
 
     p {
@@ -58,4 +101,256 @@
     flex-direction: column;
     gap: 12px;
   }
+}
+
+.related_products {
+  padding: 64px 0;
+  background-color: $color-white;
+
+  @include tablet() {
+    padding: 16px 0;
+  }
+
+  .main_title {
+    margin-bottom: 32px;
+
+    @include tablet() {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.related_cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include desktop-big() {
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.related_card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+
+  @include tablet() {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heart-icon {
+    transition: opacity 0.3s ease;
+  }
+
+  &_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn_medium_dark {
+    background-color: #434343;
+    padding: 14px 24px;
+    max-width: 165px;
+
+    span {
+      font-weight: 400;
+
+      @include tablet() {
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+
+    @include tablet() {
+      padding: 8px 23px;
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 100%;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &_discount {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: $color-red;
+    color: $color-white;
+
+    @include tablet() {
+      font-size: 11px;
+      line-height: 15px;
+    }
+  }
+
+  &_price {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include tablet() {
+      margin: 2px 0;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21px;
+      color: $color-dark;
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      color: $color-dark;
+
+      @include tablet() {
+        font-size: 11px;
+        line-height: 15px;
+      }
+
+      span {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -5px;
+          margin: auto 0;
+          height: 1px;
+          width: 43px;
+          transform: rotate(-15deg);
+          background-color: $color-red;
+
+          @include tablet() {
+            width: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $color-dark;
+    margin-bottom: 16px;
+
+    @include tablet() {
+      font-size: 11px;
+      line-height: 15px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &_id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    flex-wrap: wrap;
+
+    span {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 15px;
+      color: #727272;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      padding: 2px 4px;
+      border-radius: 8px;
+      color: $color-white;
+      background-color: #5FBB43;
+    }
+  }
+}
+
+.card_btn.active {
+  display: none;
+}
+
+.count_block {
+  height: 52px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  @include tablet() {
+    height: 40px;
+  }
+
+  span {
+    min-width: 23px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .count_btn {
+    background-color: $color-white;
+    box-shadow: 0px 4px 8px 0px #0000000D;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: .3s linear;
+
+    &:hover {
+      background-color: $color-dark;
+
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.count_block.active {
+  display: flex;
 }

@@ -691,6 +691,8 @@ address {
   font-weight: 500;
   line-height: 16px;
   color: #B3B3B3;
+  white-space: nowrap;
+  display: block;
 }
 .breadcrumb span {
   color: #7EA479;
@@ -2296,7 +2298,25 @@ address {
   }
 }
 
+.new_single {
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .new_single .breadcrumb {
+    margin-left: 44px;
+    padding: 20px 0 16px 0;
+    flex-wrap: wrap;
+  }
+  .new_single .breadcrumb_end {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 .new_single_content {
+  position: relative;
   max-width: 832px;
   background-color: #FFFFFF;
   padding: 16px;
@@ -2304,7 +2324,29 @@ address {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 122px;
+  margin: 0 auto 122px auto;
+}
+@media (max-width: 1023px) {
+  .new_single_content {
+    gap: 16px;
+    position: static;
+    margin: 0 auto 40px auto;
+  }
+}
+@media (max-width: 480px) {
+  .new_single_content {
+    margin: 0 4px 40px 4px;
+  }
+}
+.new_single_content .page_prev_btn {
+  top: 0;
+  left: -50px;
+}
+@media (max-width: 1023px) {
+  .new_single_content .page_prev_btn {
+    left: 16px;
+    top: 20px;
+  }
 }
 .new_single_content img {
   border-radius: 16px;
@@ -2315,6 +2357,12 @@ address {
   font-weight: 600;
   line-height: 38px;
   color: #303030;
+}
+@media (max-width: 1023px) {
+  .new_single_content h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
 .new_single_content p {
   font-size: 14px;
@@ -2346,6 +2394,248 @@ address {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.related_products {
+  padding: 64px 0;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1023px) {
+  .related_products {
+    padding: 16px 0;
+  }
+}
+.related_products .main_title {
+  margin-bottom: 32px;
+}
+@media (max-width: 1023px) {
+  .related_products .main_title {
+    margin-bottom: 16px;
+  }
+}
+
+.related_cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1500px) {
+  .related_cards {
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1023px) {
+  .related_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.related_card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .related_card {
+    padding: 8px;
+    gap: 8px;
+  }
+}
+.related_card .heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.related_card .heart-icon {
+  transition: opacity 0.3s ease;
+}
+.related_card_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.related_card .btn_medium_dark {
+  background-color: #434343;
+  padding: 14px 24px;
+  max-width: 165px;
+}
+.related_card .btn_medium_dark span {
+  font-weight: 400;
+}
+@media (max-width: 1023px) {
+  .related_card .btn_medium_dark span {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 1023px) {
+  .related_card .btn_medium_dark {
+    padding: 8px 23px;
+    font-size: 16px;
+    line-height: 21px;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.related_card_discount {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 2px;
+  border-radius: 4px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+@media (max-width: 1023px) {
+  .related_card_discount {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+.related_card_price {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 1023px) {
+  .related_card_price {
+    margin: 2px 0;
+  }
+}
+.related_card_price h5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #303030;
+}
+.related_card_price h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .related_card_price h4 {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+.related_card_price h4 span {
+  position: relative;
+}
+.related_card_price h4 span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  margin: auto 0;
+  height: 1px;
+  width: 43px;
+  transform: rotate(-15deg);
+  background-color: #FF0000;
+}
+@media (max-width: 1023px) {
+  .related_card_price h4 span::before {
+    width: 33px;
+  }
+}
+.related_card h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+  margin-bottom: 16px;
+}
+@media (max-width: 1023px) {
+  .related_card h6 {
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 2px;
+  }
+}
+.related_card_id {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.related_card_id span {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #727272;
+}
+.related_card_id p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 2px 4px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background-color: #5FBB43;
+}
+
+.card_btn.active {
+  display: none;
+}
+
+.count_block {
+  height: 52px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+@media (max-width: 1023px) {
+  .count_block {
+    height: 40px;
+  }
+}
+.count_block span {
+  min-width: 23px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.count_block .count_btn {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.0509803922);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.3s linear;
+}
+.count_block .count_btn:hover {
+  background-color: #303030;
+}
+.count_block .count_btn:hover svg path {
+  fill: #FFFFFF;
+}
+
+.count_block.active {
+  display: flex;
 }
 
 .contact {

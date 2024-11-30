@@ -1,3 +1,4 @@
+// menu
 let navMenu = document.querySelector(".media_menu");
 let navClose = document.querySelector(".media_menu_close");
 let navBurger = document.querySelector(".burger");
@@ -9,15 +10,31 @@ navBurger.addEventListener('click', () => {
 navClose.addEventListener('click', () => {
   navMenu.classList.remove('active');
 })
+// menu
 
-// let video_btn = document.querySelector(".video_btn");
-// let order_video = document.querySelector(".order_video");
-// let order__left_in = document.querySelector(".order__left_in");
+// heart
+function toggleHeartIcon(heartElement) {
+  const defaultIcon = heartElement.querySelector('.default-icon');
+  const activeIcon = heartElement.querySelector('.active-icon');
 
-// video_btn.addEventListener('click', () => {
-//   order_video.classList.add('active');
-//   order__left_in.classList.add('active');
-// })
+  if (defaultIcon.style.display === 'none') {
+    defaultIcon.style.display = 'block';
+    activeIcon.style.display = 'none';
+  } else {
+    defaultIcon.style.display = 'none';
+    activeIcon.style.display = 'block';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const heartElements = document.querySelectorAll('.heart');
+  heartElements.forEach(function (heartElement) {
+    heartElement.addEventListener('click', function () {
+      toggleHeartIcon(heartElement);
+    });
+  });
+});
+// heart
 
 // tab global
 document.querySelectorAll('.tab-btn').forEach((button) => {
@@ -33,6 +50,7 @@ document.querySelectorAll('.tab-btn').forEach((button) => {
 });
 // tab global
 
+// partner slider
 var swiper = new Swiper(".partnerSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -61,8 +79,10 @@ var swiper = new Swiper(".partnerSwiper", {
     },
   },
 });
+// partner slider
 
 
+// tab slider
 document.addEventListener("DOMContentLoaded", () => {
   const tabButtons = document.querySelectorAll(".tab-container__tabs-button");
   const tabContents = document.querySelectorAll(".tab-container__content");
@@ -79,8 +99,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// tab slider
 
 
+// count_block
+function toggleCountBlock(event) {
+  const cardBtn = event.target.closest('.card_btn');
+  const countBlock = cardBtn.nextElementSibling;
+
+  if (countBlock && countBlock.classList.contains('count_block')) {
+    countBlock.classList.toggle('active');
+  }
+
+  cardBtn.classList.toggle('active');
+}
+
+document.querySelectorAll('.card_btn').forEach(button => {
+  button.addEventListener('click', toggleCountBlock);
+});
+// count_block
+
+// count_plus_minus
+function updateCount(event) {
+  const countBlock = event.target.closest('.count_block');
+  if (!countBlock) return;
+
+  const span = countBlock.querySelector('span');
+  let count = parseInt(span.textContent, 10);
+
+  if (event.target.closest('.plus') && count < 99) {
+    count++;
+  }
+
+  if (event.target.closest('.minus') && count > 0) {
+    count--;
+  }
+
+  span.textContent = count;
+}
+
+document.querySelectorAll('.plus, .minus').forEach(button => {
+  button.addEventListener('click', updateCount);
+});
+// count_plus_minus
+
+
+
+// news tabs
 const newsSwp = document.querySelectorAll('.news .swp');
 
 if (newsSwp.length) {
@@ -150,7 +215,9 @@ if (serviceItem.length) {
 
   })
 }
+// news tabs
 
+// modal
 const orderModal = document.querySelector('.order-modal');
 const orderModalOpen = document.querySelector('.order-modal__open');
 const orderModalClose = document.querySelector('.order-modal__close');
@@ -169,25 +236,46 @@ if (orderModalOpen) {
     orderModal.classList.remove('active');
   }
 }
-// const container = document.querySelector('.product .container');
-// document.querySelector('.product .slider').addEventListener('input', (e) => {
-//   container.style.setProperty('--position', `${e.target.value}%`);
-// })
+// modal
 
+
+// range
+
+// eski versiya
+// var divisor = document.getElementById("divisor"),
+//     handle = document.getElementById("handle"),
+//     slider = document.getElementById("slider");
+
+// function moveDivisor() {
+//   handle.style.left = slider.value+"%";
+// 	divisor.style.width = slider.value+"%";
+// }
+
+// window.onload = function() {
+// 	moveDivisor();
+// };
 
 var divisor = document.getElementById("divisor"),
     handle = document.getElementById("handle"),
     slider = document.getElementById("slider");
 
 function moveDivisor() {
-  handle.style.left = slider.value+"%";
-	divisor.style.width = slider.value+"%";
+  if (handle && divisor && slider) {
+    handle.style.left = slider.value + "%";
+    divisor.style.width = slider.value + "%";
+  }
 }
 
 window.onload = function() {
-	moveDivisor();
+  moveDivisor();
 };
 
+if (slider) {
+  slider.addEventListener("input", moveDivisor);
+}
+// range
+
+// input mask
 function maskPhone(input) {
   input.addEventListener("input", function () {
     let value = input.value.replace(/\D/g, "");
@@ -204,3 +292,4 @@ function maskPhone(input) {
 
 const phoneInputs = document.querySelectorAll(".phone-input");
 phoneInputs.forEach((input) => maskPhone(input));
+// input mask

@@ -400,6 +400,8 @@ address {
     font-weight: 500;
     line-height: 16px;
     color: $color-grey;
+    white-space: nowrap;
+    display: block;
   }
 
   span {
