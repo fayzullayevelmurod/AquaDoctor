@@ -494,6 +494,12 @@ address {
   justify-content: center;
   transition: .3s linear;
 
+  svg {
+    path {
+      transition: .3s linear;
+    }
+  }
+
   &:hover {
     background-color: $color-dark;
 

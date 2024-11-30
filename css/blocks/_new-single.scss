@@ -141,8 +141,15 @@
   gap: 16px;
   padding: 16px;
   position: relative;
+  transition: .3s linear;
+  border-radius: 32px;
+
+  &:hover {
+    box-shadow: 0px 4px 16px 0px #00000014;
+  }
 
   @include tablet() {
+    border-radius: 24px;
     padding: 8px;
     gap: 8px;
   }
@@ -169,6 +176,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 251px;
   }
 
   .btn_medium_dark {
@@ -309,10 +317,11 @@
   height: 52px;
   display: none;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 12px;
 
   @include tablet() {
+    justify-content: center;
     height: 40px;
   }
 
