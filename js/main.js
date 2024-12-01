@@ -81,6 +81,28 @@ var swiper = new Swiper(".partnerSwiper", {
 });
 // partner slider
 
+// partner slider
+var swiper2 = new Swiper(".orderSwiper", {
+  slidesPerView: 2.2,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".order-button-next",
+    prevEl: ".order-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3.2,
+    },
+    993: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});
+// partner slider
+
 
 // tab slider
 document.addEventListener("DOMContentLoaded", () => {

@@ -1019,7 +1019,7 @@ address {
   padding-top: 106px;
   position: relative;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home {
     padding-bottom: 80px;
   }
@@ -1041,7 +1041,7 @@ address {
   z-index: 2;
   border-radius: 48px 48px 0 0;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_end {
     display: none;
   }
@@ -1051,7 +1051,7 @@ address {
   align-items: end;
   gap: 53px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_in {
     align-items: center;
   }
@@ -1098,7 +1098,7 @@ address {
   color: #FFFFFF;
   margin-bottom: 161px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home h1 {
     font-size: 32px;
     line-height: 40px;
@@ -1111,7 +1111,7 @@ address {
 .home .btn_medium_green {
   display: none;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home .btn_medium_green {
     display: flex;
     order: 4;
@@ -1123,7 +1123,7 @@ address {
   align-items: stretch;
   gap: 20px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic {
     flex-wrap: wrap;
     gap: 8px;
@@ -1141,7 +1141,7 @@ address {
   gap: 32px;
   flex: 1;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic .statistic_block {
     padding: 16px 8px;
     height: 87px;
@@ -1149,20 +1149,20 @@ address {
     border-radius: 16px;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic .one {
     order: 1;
     width: 50%;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic .two {
     order: 3;
     flex: 1;
     min-width: 100%;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic .three {
     order: 2;
     width: 50%;
@@ -1174,7 +1174,7 @@ address {
   line-height: 56px;
   color: #FFFFFF;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic h6 {
     font-size: 26px;
     line-height: 34px;
@@ -1186,7 +1186,7 @@ address {
   line-height: 21px;
   color: #FFFFFF;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .home_statistic p {
     font-size: 14px;
     line-height: 17px;
@@ -1197,7 +1197,7 @@ address {
   padding: 43px 0 100px 0;
   background-color: #FFFFFF;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .category {
     padding: 70px 0;
   }
@@ -1302,7 +1302,7 @@ address {
   align-items: flex-start;
   gap: 142px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .order__container {
     gap: 50px;
   }
@@ -1379,7 +1379,7 @@ address {
   flex-direction: column;
   gap: 50px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .order__right {
     width: 100%;
   }
@@ -2896,7 +2896,7 @@ address {
   background-size: cover;
   border-radius: 40px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .product {
     background-position: center;
   }
@@ -3455,25 +3455,31 @@ address {
     gap: 16px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1350px) {
   .order_page_in .container {
-    max-width: 100%;
     flex-direction: column;
   }
 }
-.order_page_right {
-  width: 588px;
-}
 @media (max-width: 1023px) {
+  .order_page_in .container {
+    max-width: 100%;
+  }
+}
+.order_page_right {
+  max-width: 588px;
+}
+@media (max-width: 1350px) {
   .order_page_right {
+    max-width: 100%;
     width: 100%;
   }
 }
 .order_page_left {
-  width: 710px;
+  max-width: 710px;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1350px) {
   .order_page_left {
+    max-width: 100%;
     width: 100%;
   }
 }
@@ -3518,8 +3524,111 @@ address {
   line-height: 26px;
   color: #303030;
 }
+.order_page .order_swiper_wrapper {
+  position: relative;
+}
+.order_page .order_swiper_wrapper .slider_btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.0509803922);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+}
+@media (max-width: 1350px) {
+  .order_page .order_swiper_wrapper .slider_btn {
+    display: none;
+  }
+}
+.order_page .order_swiper_wrapper .slider_btn svg path {
+  transition: 0.3s linear;
+}
+.order_page .order_swiper_wrapper .slider_btn:hover {
+  background-color: #303030;
+}
+.order_page .order_swiper_wrapper .slider_btn:hover svg path {
+  fill: #FFFFFF;
+}
+.order_page .order_swiper_wrapper .order-button-prev {
+  left: -45px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.order_page .order_swiper_wrapper .order-button-next {
+  right: -45px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.order_page .order_swiper_wrapper .swiper-button-disabled {
+  display: none;
+}
+.order_page_slider {
+  padding: 24px;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+  margin-bottom: 24px;
+}
+@media (max-width: 1350px) {
+  .order_page_slider {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  .order_page_slider {
+    padding: 16px 0;
+    border-radius: 24px 0 0 24px;
+    margin-bottom: 16px;
+  }
+}
+.order_page_slider h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #303030;
+  margin-bottom: 24px;
+}
+@media (max-width: 1023px) {
+  .order_page_slider h6 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 1023px) and (max-width: 1023px) {
+  .order_page_slider h6 {
+    padding-left: 16px;
+    margin-right: 16px;
+  }
+}
+.order_page_slider .order_logo {
+  border-radius: 24px;
+  width: 100%;
+}
+.order_page_slider .order_logo img {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .order_page_slider .orderSwiper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .order_page .basket_right {
   margin-top: 24px;
+}
+@media (max-width: 1350px) {
+  .order_page .basket_right {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 16px;
+  }
 }
 .order_page .basket_right .green {
   color: #5FBB43;
@@ -3536,6 +3645,7 @@ address {
 @media (max-width: 1023px) {
   .order_page .delivery {
     padding: 16px;
+    border-radius: 24px;
   }
 }
 .order_page .delivery_title {
@@ -3629,7 +3739,7 @@ address {
   align-items: center;
   gap: 64px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .footer_link {
     gap: 30px;
   }
@@ -3657,7 +3767,7 @@ address {
   display: flex;
   gap: 280px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .footer_center .container {
     gap: 32px;
     justify-content: space-between;
