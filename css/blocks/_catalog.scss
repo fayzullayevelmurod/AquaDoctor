@@ -1,0 +1,62 @@
+.catalog {
+  position: relative;
+  background-color: $color-white;
+
+  .main_title {
+    padding-bottom: 48px;
+    @include tablet() {
+      text-align: center;
+      padding: 16px 0 32px 0;
+    }
+  }
+
+  .breadcrumb {
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  .page_prev_btn {
+    display: none;
+
+    @include tablet() {
+      display: flex;
+      top: 20px;
+      left: 16px;
+    }
+  }
+
+  &_in {
+    .container {
+      display: flex;
+      align-items: start;
+      gap: 70px;
+      justify-content: space-between;
+    }
+  }
+
+  &_left {
+    min-width: 295px;
+
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &_right {
+
+  }
+
+  .related_cards {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include desktop() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
