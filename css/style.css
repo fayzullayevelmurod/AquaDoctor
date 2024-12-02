@@ -3476,7 +3476,8 @@ address {
 }
 @media (max-width: 1023px) {
   .catalog_left {
-    display: flex;
+    overflow-y: scroll;
+    display: none;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -3488,6 +3489,9 @@ address {
     width: 343px;
     gap: 20px;
   }
+}
+.catalog_left.active {
+  display: flex;
 }
 .catalog_left_block {
   display: flex;
@@ -3558,29 +3562,6 @@ address {
   flex-direction: column;
   gap: 24px;
 }
-@media (max-width: 480px) {
-  .catalog_left_block_center {
-    overflow-y: scroll;
-    gap: 20px;
-    max-height: 280px;
-    padding-right: 4px;
-  }
-  .catalog_left_block_center::-webkit-scrollbar {
-    width: 3px;
-    border-radius: 10px;
-  }
-  .catalog_left_block_center::-webkit-scrollbar-thumb {
-    width: 2px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #B3B3B3;
-  }
-  .catalog_left_block_center::-webkit-scrollbar-track {
-    width: 3px;
-    border-radius: 10px;
-    background-color: #D9D9D9;
-  }
-}
 .catalog .related_cards {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -3605,10 +3586,8 @@ address {
   height: 100%;
   z-index: 4;
 }
-@media (max-width: 1023px) {
-  .filter_bg {
-    display: flex;
-  }
+.filter_bg.active {
+  display: flex;
 }
 
 .order_page {

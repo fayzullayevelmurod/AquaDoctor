@@ -12,6 +12,28 @@ navClose.addEventListener('click', () => {
 })
 // menu
 
+// catalog_filter
+let catalog_filter_btn = document.querySelector('.catalog_filter_btn');
+let filter_close = document.querySelector('.filter_close');
+let catalog_left = document.querySelector('.catalog_left');
+let filter_bg = document.querySelector('.filter_bg');
+
+catalog_filter_btn.addEventListener('click', () => {
+  catalog_left.classList.add('active');
+  filter_bg.classList.add('active');
+});
+
+filter_close.addEventListener('click', () => {
+  catalog_left.classList.remove('active');
+  filter_bg.classList.remove('active');
+});
+
+filter_bg.addEventListener('click', () => {
+  catalog_left.classList.remove('active');
+  filter_bg.classList.remove('active');
+});
+// catalog_filter
+
 // heart
 function toggleHeartIcon(heartElement) {
   const defaultIcon = heartElement.querySelector('.default-icon');
