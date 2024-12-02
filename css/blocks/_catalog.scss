@@ -26,7 +26,37 @@
     }
   }
 
+  &_btns {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet() {
+      margin-bottom: 16px;
+    }
+  }
+
+  &_filter_btn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $color-green-light;
+    margin-left: auto;
+    display: none;
+
+    @include tablet() {
+      display: flex;
+    }
+  }
+
   &_in {
+    padding-bottom: 120px;
+
+    @include tablet() {
+      padding-bottom: 50px;
+    }
+
     .container {
       display: flex;
       align-items: start;
@@ -37,14 +67,99 @@
 
   &_left {
     min-width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 20px;
 
     @include tablet() {
-      display: none;
+      display: flex;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-white;
+      border-radius: 16px;
+      padding: 16px;
+      z-index: 5;
+      width: 343px;
+      gap: 20px;
     }
   }
 
-  &_right {
+  &_left_block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid $color-line;
 
+    @include tablet() {
+      gap: 12px;
+      padding-bottom: 18px;
+    }
+
+    &_title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $color-green-light;
+        display: none;
+
+        @include tablet() {
+          display: block;
+        }
+      }
+
+      .page_prev_btn {
+        position: static;
+
+        &:hover {
+          svg {
+            path {
+              stroke: $color-white;
+            }
+          }
+        }
+      }
+    }
+
+    &_end_btn {
+      padding: 14px 24px;
+      color: $color-white;
+      background-color: #434343;
+      width: 147px;
+      display: none;
+
+      @include tablet() {
+        display: block;
+      }
+    }
+
+    h6 {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $color-dark;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
   }
 
   .related_cards {
@@ -57,6 +172,21 @@
     @include mobile-s() {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+}
+
+.filter_bg {
+  display: none;
+  background: rgba(48, 48, 48, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+
+  @include tablet() {
+    display: flex;
   }
 }
 
