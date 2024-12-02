@@ -3553,6 +3553,25 @@ address {
   align-items: center;
   justify-content: space-between;
 }
+.catalog_left_block_center {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 480px) {
+  .catalog_left_block_center {
+    overflow-y: scroll;
+    gap: 20px;
+    max-height: 280px;
+    padding: 2px;
+  }
+  .catalog_left_block_center::-webkit-scrollbar-thumb {
+    width: 2px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #B3B3B3;
+  }
+}
 .catalog .related_cards {
   grid-template-columns: repeat(3, 1fr);
 }
