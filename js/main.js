@@ -13,24 +13,38 @@ navClose.addEventListener('click', () => {
 // menu
 
 // catalog_filter
-let catalog_filter_btn = document.querySelector('.catalog_filter_btn');
-let filter_close = document.querySelector('.filter_close');
-let catalog_left = document.querySelector('.catalog_left');
-let filter_bg = document.querySelector('.filter_bg');
+document.addEventListener('DOMContentLoaded', () => {
+  let catalog_filter_btn = document.querySelector('.catalog_filter_btn');
+  let filter_close = document.querySelector('.filter_close');
+  let catalog_left = document.querySelector('.catalog_left');
+  let filter_bg = document.querySelector('.filter_bg');
 
-catalog_filter_btn.addEventListener('click', () => {
-  catalog_left.classList.add('active');
-  filter_bg.classList.add('active');
-});
+  if (catalog_filter_btn) {
+      catalog_filter_btn.addEventListener('click', () => {
+          if (catalog_left && filter_bg) {
+              catalog_left.classList.add('active');
+              filter_bg.classList.add('active');
+          }
+      });
+  }
 
-filter_close.addEventListener('click', () => {
-  catalog_left.classList.remove('active');
-  filter_bg.classList.remove('active');
-});
+  if (filter_close) {
+      filter_close.addEventListener('click', () => {
+          if (catalog_left && filter_bg) {
+              catalog_left.classList.remove('active');
+              filter_bg.classList.remove('active');
+          }
+      });
+  }
 
-filter_bg.addEventListener('click', () => {
-  catalog_left.classList.remove('active');
-  filter_bg.classList.remove('active');
+  if (filter_bg) {
+      filter_bg.addEventListener('click', () => {
+          if (catalog_left && filter_bg) {
+              catalog_left.classList.remove('active');
+              filter_bg.classList.remove('active');
+          }
+      });
+  }
 });
 // catalog_filter
 
@@ -124,6 +138,21 @@ var swiper2 = new Swiper(".orderSwiper", {
   },
 });
 // partner slider
+
+// product_cardSwiper
+var swiper3 = new Swiper(".product_cardSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".comment-button-next",
+    prevEl: ".comment-button-prev",
+  },
+  pagination: {
+    el: ".comment-pagination",
+    clickable: true,
+  },
+});
+// product_cardSwiper
 
 
 // tab slider

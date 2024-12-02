@@ -3590,6 +3590,258 @@ address {
   display: flex;
 }
 
+.product_card_page {
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .product_card_page .breadcrumb {
+    display: none;
+  }
+}
+.product_card_page .page_prev_btn {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .product_card_page .page_prev_btn {
+    display: flex;
+  }
+}
+.product_card_page_end {
+  padding: 100px 0;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end {
+    padding: 60px 0;
+  }
+}
+.product_card_page_end .container {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .container {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.product_card_page_end_block {
+  width: calc(50% - 10px);
+}
+@media (max-width: 1023px) {
+  .product_card_page_end_block {
+    width: 100%;
+  }
+}
+.product_card_page_end .calculator {
+  padding: 40px 48px;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .calculator {
+    gap: 24px;
+    padding: 16px;
+  }
+}
+.product_card_page_end .calculator h6 {
+  margin-bottom: 8px;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .calculator p {
+    text-align: center;
+  }
+}
+.product_card_page_end .calculator_form {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .calculator_form {
+    flex-direction: column;
+  }
+}
+.product_card_page_end .calculator_form .input_block {
+  width: 100%;
+}
+.product_card_page_end .calculator_form label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #757575;
+  margin-bottom: 4px;
+}
+.product_card_page_end .calculator_form .main_input {
+  width: 100%;
+}
+.product_card_page_end .calculator_form .btn_medium_dark {
+  width: 163px;
+  padding: 19px 32px;
+  background-color: #434343;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .calculator_form .btn_medium_dark {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.product_card_page_end .calculator .line {
+  height: 1px;
+  background-color: #EEEFF0;
+  width: 100%;
+}
+.product_card_page_end .calculator_end {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .calculator_end {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.product_card_page_end .calculator_end h5 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #B3B3B3;
+  margin-bottom: 8px;
+}
+.product_card_page_end .calculator_end h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  color: #7EA479;
+}
+.product_card_page_end .calculator_text {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #B3B3B3;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .calculator_text {
+    text-align: center;
+  }
+}
+.product_card_page_end .comment {
+  padding: 40px 64px;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .comment {
+    padding: 16px;
+  }
+}
+.product_card_page_end .comment-pagination {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .comment-pagination {
+    bottom: 16px;
+  }
+}
+.product_card_page_end .comment-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #D9D9D9;
+  margin: 0 !important;
+}
+.product_card_page_end .comment-pagination .swiper-pagination-bullet-active {
+  background-color: #303030;
+}
+.product_card_page_end .comment .slider_btn {
+  position: absolute;
+  display: flex;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end .comment .slider_btn {
+    display: none;
+  }
+}
+.product_card_page_end .comment .comment-button-next {
+  right: 8px;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  margin: auto 0;
+}
+.product_card_page_end .comment .comment-button-prev {
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.product_card_page_end .comment_in {
+  display: flex;
+  align-items: center;
+}
+.product_card_page_end .comment .product_card_block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.product_card_page_end .comment .product_card_block img {
+  width: 60px;
+}
+.product_card_page_end .comment .product_card_block h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+}
+.product_card_page_end .comment .product_card_block span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #B3B3B3;
+}
+.product_card_page_end .comment .product_card_block p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+  padding-bottom: 32px;
+}
+.product_card_page_end h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .product_card_page_end h6 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
+  }
+}
+.product_card_page_end p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+}
+
 .order_page {
   position: relative;
 }
