@@ -30,6 +30,10 @@ body {
   background-color: #EEEFF0;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 input, textarea {
   outline: none;
   border: 0;
@@ -585,5 +589,4 @@ address {
 .custom-select.active .select-selected svg {
   transform: rotate(0deg);
 }
-
 // select
