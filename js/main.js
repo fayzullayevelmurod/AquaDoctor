@@ -48,6 +48,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // catalog_filter
 
+// select
+document.addEventListener("DOMContentLoaded", function () {
+  const customSelect = document.querySelector(".custom-select");
+  const selected = customSelect.querySelector(".select-selected");
+  const optionsContainer = customSelect.querySelector(".select-options");
+  const options = customSelect.querySelectorAll(".select-option");
+
+  selected.addEventListener("click", () => {
+    customSelect.classList.toggle("active");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      selected.querySelector("span").textContent = option.textContent;
+      customSelect.classList.remove("active");
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!customSelect.contains(e.target)) {
+      customSelect.classList.remove("active");
+    }
+  });
+});
+// select
+
 // heart
 function toggleHeartIcon(heartElement) {
   const defaultIcon = heartElement.querySelector('.default-icon');
