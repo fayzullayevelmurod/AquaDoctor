@@ -17,6 +17,8 @@
   }
 
   &_start_right {
+    padding-bottom: 30px;
+
     ul {
       display: flex;
       align-items: center;
@@ -73,14 +75,31 @@
       margin-bottom: 24px;
     }
 
-    .custom-select {
-      width: 73px;
-      margin-left: 0;
+    .product_select {
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $color-grey;
+      }
 
-      .select-options {
-        width: 100%;
+      .custom-select {
+        width: 73px;
+        margin-left: 0;
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          color: $color-dark;
+        }
+
+        .select-options {
+          width: 100%;
+        }
       }
     }
+
 
     .related_card_price {
       margin: 16px 0;
@@ -132,6 +151,35 @@
             }
           }
         }
+      }
+    }
+
+    .product_card_page_btns {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 75px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 0;
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          color: $color-green-light;
+        }
+      }
+
+      .btn_medium_green {
+        width: 170px;
+      }
+
+      .btn_medium_dark {
+        width: 268px;
       }
     }
   }
