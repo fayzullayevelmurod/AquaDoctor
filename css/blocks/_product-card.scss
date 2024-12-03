@@ -1,5 +1,6 @@
 .product_card_page {
   position: relative;
+  background-color: $color-white;
 
   .breadcrumb {
     @include tablet() {
@@ -15,8 +16,129 @@
     }
   }
 
+  &_start_right {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .circle {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: $color-grey;
+      }
+
+      li {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: $color-grey;
+      }
+    }
+
+    h6 {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $color-grey-dark;
+    }
+
+    h5 {
+      font-family: $font-Raleway;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 38px;
+      color: $color-grey-dark;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #727272;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+    }
+
+    a {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $color-green-light;
+      margin-bottom: 24px;
+    }
+
+    .custom-select {
+      width: 73px;
+      margin-left: 0;
+
+      .select-options {
+        width: 100%;
+      }
+    }
+
+    .related_card_price {
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      @include tablet() {
+        margin: 2px 0;
+      }
+
+      h5 {
+        font-family: $font-Inter;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 38px;
+        color: $color-dark;
+        margin-bottom: 0;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $color-dark;
+
+        @include tablet() {
+          font-size: 11px;
+          line-height: 15px;
+        }
+
+        span {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -5px;
+            margin: auto 0;
+            height: 1px;
+            width: 43px;
+            transform: rotate(-15deg);
+            background-color: $color-red;
+
+            @include tablet() {
+              width: 33px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &_end {
     padding: 100px 0;
+    background-color: #EEEFF0;
 
     @include tablet() {
       padding: 60px 0;
