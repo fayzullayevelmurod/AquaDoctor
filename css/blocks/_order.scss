@@ -12,10 +12,10 @@
 
         @include desktop-two {
             gap: 50px;
+            flex-direction: column;
         }
 
         @include tablet {
-            flex-direction: column;
             gap: 16px;
         }
     }
@@ -24,65 +24,27 @@
         width: 710px;
         height: 589px;
         flex-shrink: 0;
-        // border-radius: 32px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
         z-index: 1;
-        // padding: 24px;
+        aspect-ratio: 16 / 9;
 
-        @include desktop {
-            width: calc(50% - 25px);
-        }
-
-        @include tablet {
+        @include desktop-two {
             width: 100%;
-            height: 240px;
-            // padding: 24px 16px
+            height: 100%;
+            overflow: hidden;
         }
-
-        // .bg-img {
-        //     position: absolute;
-        //     z-index: -1;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     object-fit: cover;
-        // }
-
-        // .video_btn {
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -50%);
-
-        //     @include tablet {
-        //         img {
-        //             width: 40px;
-        //         }
-        //     }
-        // }
-
-        // &_in {
-        //     &.active {
-        //         display: none;
-        //     }
-        // }
 
         .order_video {
             width: 100%;
-            object-fit: contain;
-            background-size: contain;
-            display: block;
-            aspect-ratio: 16 / 9;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
-
-        // .order_video.active {
-        //     display: block;
-        // }
 
         h3 {
             font-family: $font-Raleway;

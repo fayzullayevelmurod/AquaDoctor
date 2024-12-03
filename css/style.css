@@ -1392,11 +1392,11 @@ address {
 @media (max-width: 1350px) {
   .order__container {
     gap: 50px;
+    flex-direction: column;
   }
 }
 @media (max-width: 1023px) {
   .order__container {
-    flex-direction: column;
     gap: 16px;
   }
 }
@@ -1410,25 +1410,21 @@ address {
   justify-content: flex-end;
   position: relative;
   z-index: 1;
+  aspect-ratio: 16/9;
 }
-@media (max-width: 1200px) {
-  .order__left {
-    width: calc(50% - 25px);
-  }
-}
-@media (max-width: 1023px) {
+@media (max-width: 1350px) {
   .order__left {
     width: 100%;
-    height: 240px;
+    height: 100%;
+    overflow: hidden;
   }
 }
 .order__left .order_video {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  background-size: contain;
-  display: block;
-  aspect-ratio: 16/9;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .order__left h3 {
   font-family: "Raleway", sans-serif;
