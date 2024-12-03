@@ -275,7 +275,7 @@ address {
   }
 
   &_dark {
-    background-color: $color-dark;
+    background-color: $color-grey-dark;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -521,6 +521,7 @@ address {
   margin-left: auto;
   position: relative;
   background-color: $color-white;
+  border-radius: 8px;
 
   @include tablet() {
     margin-left: 0;
@@ -535,12 +536,14 @@ address {
   gap: 8px;
   padding: 6px 10px;
   border: 1px solid #D9D9D9;
+  background-color: $color-white;
   border-radius: 8px;
   cursor: pointer;
 
   span {
     overflow: hidden;
     white-space: nowrap;
+    margin-bottom: 0 !important;
   }
 }
 

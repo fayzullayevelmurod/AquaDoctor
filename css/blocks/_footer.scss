@@ -2,6 +2,12 @@
   background-color: $color-green-dark;
   padding: 64px 0;
 
+  &.product_card_page_footer {
+    @include tablet() {
+      padding: 32px 0 160px 0;
+    }
+  }
+
   @include tablet() {
     padding: 32px 0;
   }

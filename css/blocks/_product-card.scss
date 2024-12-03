@@ -2,6 +2,10 @@
   position: relative;
   background-color: $color-white;
 
+  @include desktop-two() {
+    background-color: #EEEFF0;
+  }
+
   .product_modal {
     max-width: 828px;
     height: 95dvh;
@@ -12,7 +16,7 @@
     z-index: 8;
     border-radius: 24px 0 0 24px;
     background-color: $color-white;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 24px;
     box-shadow: 0px 4px 24px 0px #00000014;
@@ -259,13 +263,186 @@
     }
   }
 
+  .product_card_start {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    padding-bottom: 30px;
+
+    @include desktop-big() {
+      gap: 24px;
+    }
+
+    @include desktop-two() {
+      flex-direction: column;
+    }
+
+    @include tablet() {
+      padding-bottom: 0;
+    }
+  }
+
+  .desktop_price {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    border-radius: 24px 24px 0 0;
+    padding: 16px;
+    background-color: $color-white;
+    box-shadow: 0px -5px 16px 0px #0000000D;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet() {
+      display: flex;
+    }
+
+    .related_card_price {
+      gap: 15px;
+    }
+
+    h5 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    .btn_medium_dark {
+      padding: 14px;
+      width: 100%;
+      justify-content: center;
+      background-color: $color-grey-dark;
+    }
+  }
+
+  &_start_left {
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+
+    @include desktop-two() {
+      padding-top: 78px;
+      gap: 24px;
+      flex-direction: column;
+    }
+
+    .two-pagination {
+      bottom: 40px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      @include desktop-two() {
+        display: flex;
+      }
+
+      @include tablet() {
+        bottom: 16px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #D9D9D9;
+        margin: 0 !important;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: $color-dark;
+      }
+    }
+
+    .twoSwiper {
+
+      @include desktop-two() {
+        display: none;
+      }
+
+      .more_link {
+        font-family: $font-Raleway;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22.4px;
+        text-align: center;
+        color: $color-green-light;
+      }
+
+      .swiper-slide-thumb-active {
+        border: 2px solid #55A9B9 !important;
+      }
+    }
+
+    .twoSwiper2 {
+      width: 497px;
+
+      @include mobile() {
+        width: 100%;
+      }
+
+      .swiper-slide {
+        border-radius: 32px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 32px;
+        }
+      }
+    }
+
+    .swiper-thumbs {
+      width: 102px;
+      height: 100%;
+
+      .swiper-wrapper {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+
+      .swiper-slide {
+        // border: 2px solid transparent;
+        flex-shrink: 0;
+        width: 102px !important;
+        height: 110px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
   &_start_right {
     padding-bottom: 30px;
+
+    @include tablet() {
+      padding-bottom: 0;
+    }
 
     ul {
       display: flex;
       align-items: center;
       gap: 4px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+
+      @include tablet() {
+        margin-bottom: 16px;
+      }
 
       .circle {
         font-size: 12px;
@@ -296,6 +473,12 @@
       line-height: 38px;
       color: $color-grey-dark;
       margin-bottom: 24px;
+
+      @include tablet() {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 16px;
+      }
     }
 
     p {
@@ -316,6 +499,10 @@
       line-height: 21px;
       color: $color-green-light;
       margin-bottom: 24px;
+
+      @include tablet() {
+        margin-bottom: 16px;
+      }
     }
 
     .product_select {
@@ -324,6 +511,7 @@
         font-weight: 400;
         line-height: 16px;
         color: $color-grey;
+        margin-bottom: 4px;
       }
 
       .custom-select {
@@ -343,7 +531,6 @@
       }
     }
 
-
     .related_card_price {
       margin: 16px 0;
       display: flex;
@@ -352,6 +539,7 @@
 
       @include tablet() {
         margin: 2px 0;
+        display: none;
       }
 
       h5 {
@@ -403,6 +591,11 @@
       gap: 24px;
       margin-top: 75px;
 
+      @include tablet() {
+        margin-top: 25px;
+        flex-direction: column;
+      }
+
       a {
         display: flex;
         align-items: center;
@@ -419,11 +612,20 @@
 
       .btn_medium_green {
         width: 170px;
+
+        @include tablet() {
+          width: 100%;
+          justify-content: center;
+        }
       }
 
       .btn_medium_dark {
         width: 268px;
         background-color: $color-grey-dark;
+
+        @include tablet() {
+          display: none;
+        }
       }
     }
   }
@@ -433,7 +635,7 @@
     background-color: #EEEFF0;
 
     @include tablet() {
-      padding: 60px 0;
+      padding: 50px 0 60px 0;
     }
 
     .container {
@@ -479,7 +681,7 @@
 
       &_form {
         display: flex;
-        align-items: center;
+        align-items: end;
         gap: 19px;
 
         @include tablet() {

@@ -12,6 +12,26 @@ navClose.addEventListener('click', () => {
 })
 // menu
 
+// two_slider
+var swiper = new Swiper(".twoSwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  // effect: "fade",
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".twoSwiper2", {
+  spaceBetween: 10,
+  // freeMode: true,
+  thumbs: {
+    swiper: swiper,
+  },
+  pagination: {
+    el: ".two-pagination",
+    clickable: true,
+  },
+});
+// two_slider
+
 // catalog_filter
 document.addEventListener('DOMContentLoaded', () => {
   let catalog_filter_btn = document.querySelector('.catalog_filter_btn');
@@ -47,6 +67,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 // catalog_filter
+
+// range
+document.addEventListener('DOMContentLoaded', function () {
+  const rangeMin = document.getElementById('range-min');
+  const rangeMax = document.getElementById('range-max');
+  const sliderTrack = document.querySelector('.slider-track');
+  const rangeLabels = document.querySelectorAll('.range-label');
+
+  function updateSliderTrack() {
+    const min = parseInt(rangeMin.value);
+    const max = parseInt(rangeMax.value);
+
+    rangeLabels[0].textContent = `${min}р`;
+    rangeLabels[1].textContent = `${max}р`;
+
+    if (min > max - 10) {
+      rangeMin.value = max - 10;
+    }
+    if (max < min + 10) {
+      rangeMax.value = min + 10;
+    }
+
+    const percentMin = ((rangeMin.value - rangeMin.min) / (rangeMin.max - rangeMin.min)) * 100;
+    const percentMax = ((rangeMax.value - rangeMax.min) / (rangeMax.max - rangeMax.min)) * 100;
+
+    sliderTrack.style.background = `linear-gradient(to right, #D9D9D9 ${percentMin}%, #303030 ${percentMin}%, #303030 ${percentMax}%, #D9D9D9 ${percentMax}%)`;
+  }
+
+  updateSliderTrack();
+
+  rangeMin.addEventListener('input', updateSliderTrack);
+  rangeMax.addEventListener('input', updateSliderTrack);
+});
+// range
 
 // select
 document.addEventListener("DOMContentLoaded", function () {
