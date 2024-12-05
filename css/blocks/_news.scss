@@ -168,7 +168,7 @@
                         }
                     }
 
-                    h4 {
+                    span {
                         color: #B3B3B3;
                         font-size: 14px;
                         line-height: 17px;
@@ -198,7 +198,7 @@
         @include tablet {
             margin-top: 24px;
         }
-        
+
         .btn_medium_dark {
             gap: 4px;
             width: auto;

@@ -75,84 +75,105 @@ document.addEventListener('DOMContentLoaded', function () {
   const sliderTrack = document.querySelector('.slider-track');
   const rangeLabels = document.querySelectorAll('.range-label');
 
-  function updateSliderTrack() {
-    const min = parseInt(rangeMin.value);
-    const max = parseInt(rangeMax.value);
+  if (rangeMin && rangeMax && sliderTrack && rangeLabels.length === 2) {
+    function updateSliderTrack() {
+      const min = parseInt(rangeMin.value);
+      const max = parseInt(rangeMax.value);
 
-    rangeLabels[0].textContent = `${min}р`;
-    rangeLabels[1].textContent = `${max}р`;
+      rangeLabels[0].textContent = `${min}р`;
+      rangeLabels[1].textContent = `${max}р`;
 
-    if (min > max - 10) {
-      rangeMin.value = max - 10;
+      if (min > max - 10) {
+        rangeMin.value = max - 10;
+      }
+      if (max < min + 10) {
+        rangeMax.value = min + 10;
+      }
+
+      const percentMin = ((rangeMin.value - rangeMin.min) / (rangeMin.max - rangeMin.min)) * 100;
+      const percentMax = ((rangeMax.value - rangeMax.min) / (rangeMax.max - rangeMax.min)) * 100;
+
+      sliderTrack.style.background = `linear-gradient(to right, #D9D9D9 ${percentMin}%, #303030 ${percentMin}%, #303030 ${percentMax}%, #D9D9D9 ${percentMax}%)`;
     }
-    if (max < min + 10) {
-      rangeMax.value = min + 10;
-    }
 
-    const percentMin = ((rangeMin.value - rangeMin.min) / (rangeMin.max - rangeMin.min)) * 100;
-    const percentMax = ((rangeMax.value - rangeMax.min) / (rangeMax.max - rangeMax.min)) * 100;
+    updateSliderTrack();
 
-    sliderTrack.style.background = `linear-gradient(to right, #D9D9D9 ${percentMin}%, #303030 ${percentMin}%, #303030 ${percentMax}%, #D9D9D9 ${percentMax}%)`;
+    rangeMin.addEventListener('input', updateSliderTrack);
+    rangeMax.addEventListener('input', updateSliderTrack);
+  } else {
   }
-
-  updateSliderTrack();
-
-  rangeMin.addEventListener('input', updateSliderTrack);
-  rangeMax.addEventListener('input', updateSliderTrack);
 });
 // range
 
 // product_modal
-let product_modal_btn = document.querySelectorAll('.product_modal_btn');
-let product_modal = document.querySelector('.product_modal');
-let product_modal_close = document.querySelector('.product_modal_close');
-let body = document.querySelector('body');
-let product_modal_bg = document.querySelector('.product_modal_bg');
+document.addEventListener('DOMContentLoaded', () => {
+  let product_modal_btn = document.querySelectorAll('.product_modal_btn');
+  let product_modal = document.querySelector('.product_modal');
+  let product_modal_close = document.querySelector('.product_modal_close');
+  let body = document.querySelector('body');
+  let product_modal_bg = document.querySelector('.product_modal_bg');
 
-product_modal_btn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    product_modal.classList.add('active');
-    body.classList.add('hidden');
-    product_modal_bg.classList.add('active');
-  });
-});
+  if (product_modal_btn.length && product_modal && product_modal_bg) {
+    product_modal_btn.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        product_modal.classList.add('active');
+        body.classList.add('hidden');
+        product_modal_bg.classList.add('active');
+      });
+    });
 
-product_modal_close.addEventListener('click', () => {
-  product_modal.classList.remove('active');
-  body.classList.remove('hidden');
-  product_modal_bg.classList.remove('active');
-});
+    if (product_modal_close) {
+      product_modal_close.addEventListener('click', () => {
+        product_modal.classList.remove('active');
+        body.classList.remove('hidden');
+        product_modal_bg.classList.remove('active');
+      });
+    }
 
-product_modal_bg.addEventListener('click', () => {
-  product_modal.classList.remove('active');
-  body.classList.remove('hidden');
-  product_modal_bg.classList.remove('active');
+    product_modal_bg.addEventListener('click', () => {
+      product_modal.classList.remove('active');
+      body.classList.remove('hidden');
+      product_modal_bg.classList.remove('active');
+    });
+  }
 });
 // product_modal
 
 // select
 document.addEventListener("DOMContentLoaded", function () {
   const customSelect = document.querySelector(".custom-select");
-  const selected = customSelect.querySelector(".select-selected");
-  const optionsContainer = customSelect.querySelector(".select-options");
-  const options = customSelect.querySelectorAll(".select-option");
 
-  selected.addEventListener("click", () => {
-    customSelect.classList.toggle("active");
-  });
+  if (customSelect) {
+    const selected = customSelect.querySelector(".select-selected");
+    const optionsContainer = customSelect.querySelector(".select-options");
+    const options = customSelect.querySelectorAll(".select-option");
 
-  options.forEach((option) => {
-    option.addEventListener("click", () => {
-      selected.querySelector("span").textContent = option.textContent;
-      customSelect.classList.remove("active");
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!customSelect.contains(e.target)) {
-      customSelect.classList.remove("active");
+    if (selected) {
+      selected.addEventListener("click", () => {
+        customSelect.classList.toggle("active");
+      });
     }
-  });
+
+    if (options.length > 0) {
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          const selectedSpan = selected.querySelector("span");
+
+          if (selectedSpan) {
+            selectedSpan.textContent = option.textContent;
+          }
+
+          customSelect.classList.remove("active");
+        });
+      });
+    }
+
+    document.addEventListener("click", (e) => {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove("active");
+      }
+    });
+  }
 });
 // select
 
