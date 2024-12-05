@@ -102,6 +102,34 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // range
 
+// product_modal
+let product_modal_btn = document.querySelectorAll('.product_modal_btn');
+let product_modal = document.querySelector('.product_modal');
+let product_modal_close = document.querySelector('.product_modal_close');
+let body = document.querySelector('body');
+let product_modal_bg = document.querySelector('.product_modal_bg');
+
+product_modal_btn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    product_modal.classList.add('active');
+    body.classList.add('hidden');
+    product_modal_bg.classList.add('active');
+  });
+});
+
+product_modal_close.addEventListener('click', () => {
+  product_modal.classList.remove('active');
+  body.classList.remove('hidden');
+  product_modal_bg.classList.remove('active');
+});
+
+product_modal_bg.addEventListener('click', () => {
+  product_modal.classList.remove('active');
+  body.classList.remove('hidden');
+  product_modal_bg.classList.remove('active');
+});
+// product_modal
+
 // select
 document.addEventListener("DOMContentLoaded", function () {
   const customSelect = document.querySelector(".custom-select");
