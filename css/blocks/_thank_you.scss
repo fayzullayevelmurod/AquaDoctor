@@ -48,3 +48,43 @@
     }
   }
 }
+
+.error {
+
+  @include tablet() {
+    padding: 40px 0 60px 0;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    text-align: center;
+    color: $color-dark;
+
+    @include tablet() {
+      font-family: $font-Raleway;
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    text-align: center;
+    color: $color-dark;
+
+    @include tablet() {
+      margin-top: 16px;
+      font-family: $font-Raleway;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 38px;
+    }
+  }
+
+  .love_img {
+    margin: 62px 0 60px 0;
+  }
+}

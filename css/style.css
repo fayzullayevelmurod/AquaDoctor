@@ -2007,6 +2007,45 @@ address {
   }
 }
 
+@media (max-width: 1023px) {
+  .error {
+    padding: 40px 0 60px 0;
+  }
+}
+.error h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .error h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+  }
+}
+.error p {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .error p {
+    margin-top: 16px;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 38px;
+  }
+}
+.error .love_img {
+  margin: 62px 0 60px 0;
+}
+
 .news_page {
   position: relative;
 }
