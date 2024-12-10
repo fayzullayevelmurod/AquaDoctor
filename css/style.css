@@ -4938,6 +4938,34 @@ address {
   flex-shrink: 0;
 }
 
+.account {
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .account .breadcrumb {
+    display: none;
+  }
+}
+.account .page_prev_btn {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .account .page_prev_btn {
+    display: flex;
+  }
+}
+@media (max-width: 1023px) {
+  .account .main_title {
+    text-align: center;
+    padding: 16px 0 24px 0;
+  }
+}
+@media (max-width: 1023px) {
+  .account .account_title {
+    padding: 24px 0 0 0;
+    text-align: left;
+  }
+}
 .account_in {
   display: flex;
   align-items: start;
@@ -4950,7 +4978,7 @@ address {
   }
 }
 .account_left {
-  width: 223px;
+  min-width: 223px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -5094,6 +5122,37 @@ address {
 }
 .account_links .red_link {
   color: #FF0000;
+}
+.account_featured {
+  margin-bottom: 120px;
+  gap: 142px;
+}
+@media (max-width: 1023px) {
+  .account_featured .account_left {
+    display: none;
+  }
+}
+@media (max-width: 1500px) {
+  .account_featured {
+    gap: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .account_featured {
+    margin-bottom: 50px;
+  }
+}
+.account_featured .related_cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1500px) {
+  .account_featured .related_cards {
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.account_featured .related_card {
+  background-color: #FFFFFF;
 }
 
 .footer {
