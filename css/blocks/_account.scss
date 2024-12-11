@@ -1,6 +1,92 @@
 .account {
   position: relative;
 
+  &_modal {
+    width: 527px;
+    position: fixed;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 32px;
+    border-radius: 32px;
+    background-color: $color-white;
+    box-shadow: 0px 4px 24px 0px #0000001A;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    @include tablet() {
+      width: 343px;
+    }
+
+    &.active {
+      display: flex;
+    }
+
+    .page_prev_btn {
+      display: flex !important;
+      top: 16px;
+      left: auto;
+      right: 16px;
+
+      &:hover {
+        svg {
+          path {
+            stroke: $color-white;
+          }
+        }
+      }
+    }
+
+    h6 {
+      font-family: $font-Raleway;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 38px;
+      text-align: center;
+      color: $color-dark;
+
+      @include tablet() {
+        font-size: 26px;
+        line-height: 34px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: center;
+      color: $color-dark;
+    }
+
+    &_btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 61px;
+
+      button {
+        width: max-content;
+      }
+    }
+  }
+
+  &_modal_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+    background: rgba(179, 179, 179, 0.5);
+
+    &.active {
+      display: flex;
+    }
+  }
+
   .breadcrumb {
     @include tablet() {
       display: none;
@@ -267,6 +353,12 @@
 
     .related_card {
       background-color: $color-white;
+
+      .btn_medium_dark {
+        @include tablet() {
+          padding: 8px !important;
+        }
+      }
     }
   }
 

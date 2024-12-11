@@ -12,6 +12,34 @@ navClose.addEventListener('click', () => {
 })
 // menu
 
+// account_modal
+let account_modal_bg = document.querySelectorAll('.account_modal_bg');
+let account_modal = document.querySelectorAll('.account_modal');
+let account_modal_close = document.querySelectorAll('.account_modal_close');
+let account_modal_btn = document.querySelectorAll('.account_modal_btn');
+
+account_modal_btn.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        account_modal[index].classList.add('active');
+        account_modal_bg[index].classList.add('active');
+    });
+});
+
+account_modal_close.forEach((closeBtn, index) => {
+    closeBtn.addEventListener('click', () => {
+        account_modal[index].classList.remove('active');
+        account_modal_bg[index].classList.remove('active');
+    });
+});
+
+account_modal_bg.forEach((bg, index) => {
+    bg.addEventListener('click', () => {
+        account_modal[index].classList.remove('active');
+        account_modal_bg[index].classList.remove('active');
+    });
+});
+// account_modal
+
 // two_slider
 var swiper = new Swiper(".twoSwiper", {
   spaceBetween: 10,

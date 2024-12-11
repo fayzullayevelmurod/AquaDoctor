@@ -4941,6 +4941,81 @@ address {
 .account {
   position: relative;
 }
+.account_modal {
+  width: 527px;
+  position: fixed;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1019607843);
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 1023px) {
+  .account_modal {
+    width: 343px;
+  }
+}
+.account_modal.active {
+  display: flex;
+}
+.account_modal .page_prev_btn {
+  display: flex !important;
+  top: 16px;
+  left: auto;
+  right: 16px;
+}
+.account_modal .page_prev_btn:hover svg path {
+  stroke: #FFFFFF;
+}
+.account_modal h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .account_modal h6 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+.account_modal p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #303030;
+}
+.account_modal_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 61px;
+}
+.account_modal_btns button {
+  width: -moz-max-content;
+  width: max-content;
+}
+.account_modal_bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none;
+  background: rgba(179, 179, 179, 0.5);
+}
+.account_modal_bg.active {
+  display: flex;
+}
 @media (max-width: 1023px) {
   .account .breadcrumb {
     display: none;
@@ -5159,6 +5234,11 @@ address {
 }
 .account_featured .related_card {
   background-color: #FFFFFF;
+}
+@media (max-width: 1023px) {
+  .account_featured .related_card .btn_medium_dark {
+    padding: 8px !important;
+  }
 }
 .account_right {
   width: 100%;
