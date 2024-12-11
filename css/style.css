@@ -4966,6 +4966,12 @@ address {
     text-align: left;
   }
 }
+.account .btn_medium_dark,
+.account .btn_medium_green {
+  padding: 14px 24px;
+  font-size: 18px;
+  line-height: 24px;
+}
 .account_in {
   display: flex;
   align-items: start;
@@ -5205,6 +5211,24 @@ address {
   gap: 8px;
   color: #7EA479;
 }
+.account_order_two .account_block {
+  width: 100%;
+}
+.account_order_two .account_order_left {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+@media (max-width: 1350px) {
+  .account_order_two .account_order_left {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1023px) {
+  .account_order_two .account_order_left .btn_medium_green {
+    width: 100%;
+  }
+}
 .account_order_two p {
   font-size: 18px;
   line-height: 21px;
@@ -5253,6 +5277,166 @@ address {
   width: -moz-max-content;
   width: max-content;
   justify-content: center;
+}
+.account_product_card {
+  width: 60%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 32px;
+  padding: 24px;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1350px) {
+  .account_product_card {
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .account_product_card {
+    padding: 16px 8px;
+    gap: 4px;
+    align-items: start;
+  }
+}
+.account_product_card img {
+  min-width: 173px;
+  flex-shrink: 0;
+}
+@media (max-width: 1023px) {
+  .account_product_card img {
+    min-width: 99px;
+    width: 99px;
+  }
+}
+.account_product_card_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .account_product_card_content {
+    gap: 16px;
+  }
+}
+.account_product_card_text {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.account_product_card_text span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #B3B3B3;
+}
+.account_product_card_text h6 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .account_product_card_text h6 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+.account_product_card_text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+  display: flex;
+}
+@media (max-width: 1023px) {
+  .account_product_card_text p {
+    display: none;
+  }
+}
+.account_product_card .count_block {
+  display: none;
+  gap: 4px;
+}
+@media (max-width: 1023px) {
+  .account_product_card .count_block {
+    display: flex;
+  }
+}
+.account_product_card .count_block span {
+  font-size: 18px;
+  color: #303030;
+}
+.account_product_card_title h6 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+  margin-top: 16px;
+}
+@media (max-width: 1023px) {
+  .account_product_card_title h6 {
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.account_product_card_title span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #727272;
+}
+@media (max-width: 1023px) {
+  .account_product_card_title span {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+.account_product_card .btn_medium_green span {
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.account_pay {
+  width: 467px;
+  flex-shrink: 0;
+  padding: 32px;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1350px) {
+  .account_pay {
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .account_pay {
+    padding: 16px;
+  }
+}
+.account_pay a {
+  margin: 24px 0 4px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #7EA479;
+}
+@media (max-width: 1023px) {
+  .account_pay a {
+    margin: 16px 0 4px 0;
+  }
+}
+.account_pay p {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #727272;
 }
 .account .input_block label {
   margin-bottom: 4px;
