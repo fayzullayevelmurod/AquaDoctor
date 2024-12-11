@@ -5202,6 +5202,20 @@ address {
   line-height: 26px;
   color: #303030;
 }
+.account_no_order {
+  display: none;
+}
+.account_no_order .account_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.account_no_order .account_block .btn_medium_green {
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+}
 .account_order_two a {
   font-size: 16px;
   font-weight: 400;

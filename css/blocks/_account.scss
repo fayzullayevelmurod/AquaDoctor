@@ -316,6 +316,21 @@
     }
   }
 
+  &_no_order {
+    display: none;
+    .account_block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+
+      .btn_medium_green {
+        justify-content: center;
+        width: max-content;
+      }
+    }
+  }
+
   &_order_two {
     a {
       font-size: 16px;
