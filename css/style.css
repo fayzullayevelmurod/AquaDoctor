@@ -5154,6 +5154,163 @@ address {
 .account_featured .related_card {
   background-color: #FFFFFF;
 }
+.account_right {
+  width: 100%;
+}
+.account_block {
+  padding: 32px;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .account_block {
+    border-radius: 24px;
+    padding: 16px;
+  }
+}
+.account .account_order {
+  margin-bottom: 120px;
+}
+@media (max-width: 1023px) {
+  .account .account_order {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1023px) {
+  .account .account_order .account_left {
+    display: none;
+  }
+}
+.account_order_one {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.account_order_one h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #303030;
+}
+.account .input_block label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #757575;
+}
+.account .input_block .main_input {
+  width: 100%;
+}
+.account .order_price {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .account .order_price {
+    flex-direction: column-reverse;
+  }
+}
+.account .order_price_left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.account .order_price_left span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #727272;
+}
+.account .order_price_right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.account .order_price_right span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 2px 4px;
+  border-radius: 8px;
+  background-color: #5FBB43;
+}
+.account .order_price h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+}
+.account .order_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.account .order_content span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 2px 4px;
+  border-radius: 8px;
+  background-color: #5FBB43;
+}
+.account .order_content h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+}
+.account .order_content h5 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #B3B3B3;
+}
+.account .order_content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+}
+.account .line {
+  height: 1px;
+  width: 100%;
+  background-color: #D9D9D9;
+}
+.account .order_btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 1023px) {
+  .account .order_btns {
+    flex-direction: column;
+  }
+}
+.account .order_btns .btn_medium_green,
+.account .order_btns .btn_medium_dark {
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (max-width: 1023px) {
+  .account .order_btns .btn_medium_green,
+  .account .order_btns .btn_medium_dark {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 .footer {
   background-color: #3C7582;
