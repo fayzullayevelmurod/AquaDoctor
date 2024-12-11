@@ -593,3 +593,63 @@ address {
   transform: rotate(0deg);
 }
 // select
+
+// custom-radio
+.gender-selection {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: $color-dark;
+
+}
+
+.custom-radio input {
+  display: none;
+}
+
+.radio-label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $color-green-light;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease;
+}
+
+.custom-radio input:checked + .radio-label {
+  background-color: $color-green-light;
+}
+
+.custom-radio input:checked + .radio-label::after {
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%) scale(1);
+}
+// custom-radio

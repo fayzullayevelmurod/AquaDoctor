@@ -12,6 +12,14 @@ navClose.addEventListener('click', () => {
 })
 // menu
 
+// custom-radio
+document.querySelectorAll('input[name="gender"]').forEach(radio => {
+  radio.addEventListener('change', event => {
+    console.log(`Selected gender: ${event.target.value}`);
+  });
+});
+// custom-radio
+
 // account_modal
 let account_modal_bg = document.querySelectorAll('.account_modal_bg');
 let account_modal = document.querySelectorAll('.account_modal');

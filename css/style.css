@@ -865,6 +865,63 @@ address {
   transform: rotate(0deg);
 }
 
+.gender-selection {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+.radio-label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #7EA479;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease;
+}
+
+.custom-radio input:checked + .radio-label {
+  background-color: #7EA479;
+}
+
+.custom-radio input:checked + .radio-label::after {
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .header {
   background-color: #3C7582;
 }
@@ -5646,6 +5703,158 @@ address {
     width: 100%;
     justify-content: center;
   }
+}
+.account .personal_account_in {
+  margin-bottom: 100px;
+}
+@media (max-width: 1023px) {
+  .account .personal_account_in {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 1023px) {
+  .account .personal_account_in .account_left {
+    display: none;
+  }
+}
+.account .personal_account {
+  max-width: 589px;
+}
+@media (max-width: 1023px) {
+  .account .personal_account {
+    max-width: 100%;
+  }
+}
+.account .personal_account .account_block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .account .personal_account .account_block {
+    gap: 16px;
+  }
+}
+.account .personal_account .account_block .floor {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 4px;
+}
+.account .personal_account .account_block .floor_block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.account .personal_account .account_block .floor_block .circle.active {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 7px solid #7EA479;
+}
+.account .personal_account .account_block .floor_block .circle {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #7EA479;
+}
+.account .personal_account .account_block .floor_block span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+}
+.account .personal_account .account_block .main_input {
+  margin-top: 4px;
+  width: 100%;
+}
+.account .personal_account .account_block h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #303030;
+}
+.account .personal_account .account_block span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #727272;
+}
+.account .personal_account .account_block p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #303030;
+  padding: 15.5px 0;
+}
+.account .personal_account .account_block a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #7EA479;
+}
+.account .personal_account .account_block .btns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .account .personal_account .account_block .btns {
+    flex-direction: column-reverse;
+  }
+}
+.account .personal_account .account_block .btn_medium_dark,
+.account .personal_account .account_block .btn_medium_green {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 19px 32px;
+}
+@media (max-width: 1023px) {
+  .account .personal_account .account_block .btn_medium_dark,
+  .account .personal_account .account_block .btn_medium_green {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.account .personal_account .account_block .btn_medium_dark span,
+.account .personal_account .account_block .btn_medium_green span {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.account .custom-select {
+  margin-top: 4px;
+}
+.account .custom-select .select-selected {
+  padding: 16px 10px;
+  height: 55px;
+  width: 100%;
+}
+.account .custom-select .select-selected svg {
+  transform: rotate(0deg);
+}
+.account .custom-select .select_name {
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 21px;
+}
+.account .custom-select .select-option {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.account .custom-select .select-options {
+  width: 100%;
+}
+.account .custom-select.active .select-selected svg {
+  transform: rotate(180deg);
 }
 
 .footer {
