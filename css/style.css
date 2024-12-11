@@ -5196,6 +5196,64 @@ address {
   line-height: 26px;
   color: #303030;
 }
+.account_order_two a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #7EA479;
+}
+.account_order_two p {
+  font-size: 18px;
+  line-height: 21px;
+}
+.account_order_two .date {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.account_order_two .date span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #727272;
+}
+.account_order_two .issued {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 2px 4px;
+  border-radius: 8px;
+  background-color: #5FBB43;
+}
+.account_order_two .order_content_two {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.account_order_two .order_content_two h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.account_order_two .order_content_two span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #727272;
+  padding: 0;
+  background-color: transparent;
+}
+.account_order_two .btn_medium_green {
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+}
 .account .input_block label {
   margin-bottom: 4px;
   font-size: 12px;
