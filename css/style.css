@@ -5856,6 +5856,56 @@ address {
 .account .custom-select.active .select-selected svg {
   transform: rotate(180deg);
 }
+.account .password-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .account .password-container {
+    gap: 16px;
+  }
+}
+.account .password-container .input-wrapper {
+  position: relative;
+}
+.account .password-container input:focus {
+  outline: none;
+}
+.account .password-container input.error {
+  padding: 16px 10px;
+  border-color: #FF0000;
+  color: #FF0000;
+}
+.account .password-container .clear-icon {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.account .password-container input.error + .clear-icon {
+  display: inline;
+}
+.account .password-container .error-message {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FF0000 !important;
+}
+.account .password-container .error-message i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account .password-container input.error ~ .error-message {
+  display: flex;
+}
 
 .footer {
   background-color: #3C7582;

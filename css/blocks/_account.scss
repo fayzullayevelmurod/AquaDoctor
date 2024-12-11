@@ -972,4 +972,62 @@
   .custom-select.active .select-selected svg {
     transform: rotate(180deg);
   }
+
+  .password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include tablet() {
+      gap: 16px;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input.error {
+      padding: 16px 10px;
+      border-color: $color-red;
+      color: $color-red;
+    }
+
+    .clear-icon {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    input.error + .clear-icon {
+      display: inline;
+    }
+
+    .error-message {
+      display: none;
+      align-items: center;
+      gap: 4px;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      color: $color-red !important;
+    }
+
+    .error-message i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input.error ~ .error-message {
+      display: flex;
+    }
+  }
 }
