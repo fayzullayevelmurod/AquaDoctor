@@ -21,32 +21,36 @@ document.querySelectorAll('input[name="gender"]').forEach(radio => {
 // custom-radio
 
 // password
-const password1 = document.getElementById("password1");
-const password2 = document.getElementById("password2");
-const validateButton = document.getElementById("validateButton");
-const errorMessage = document.querySelector(".error-message");
-const clearIcon = document.getElementById("clearIcon");
+document.addEventListener("DOMContentLoaded", () => {
+  const password1 = document.getElementById("password1");
+  const password2 = document.getElementById("password2");
+  const validateButton = document.getElementById("validateButton");
+  const errorMessage = document.querySelector(".error-message");
+  const clearIcon = document.getElementById("clearIcon");
 
-validateButton.addEventListener("click", () => {
-  resetErrors();
+  if (password1 && password2 && validateButton && errorMessage && clearIcon) {
+    validateButton.addEventListener("click", () => {
+      resetErrors();
 
-  if (password1.value !== password2.value || password1.value === "" || password2.value === "") {
-    password2.classList.add("error");
-    errorMessage.style.display = "flex";
-    clearIcon.style.display = "inline";
+      if (password1.value !== password2.value || password1.value === "" || password2.value === "") {
+        password2.classList.add("error");
+        errorMessage.style.display = "flex";
+        clearIcon.style.display = "inline";
+      }
+    });
+
+    clearIcon.addEventListener("click", () => {
+      password2.value = "";
+      resetErrors();
+    });
+
+    function resetErrors() {
+      password2.classList.remove("error");
+      errorMessage.style.display = "none";
+      clearIcon.style.display = "none";
+    }
   }
 });
-
-clearIcon.addEventListener("click", () => {
-  password2.value = "";
-  resetErrors();
-});
-
-function resetErrors() {
-  password2.classList.remove("error");
-  errorMessage.style.display = "none";
-  clearIcon.style.display = "none";
-}
 // password
 
 // account_modal

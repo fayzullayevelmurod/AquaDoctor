@@ -5297,6 +5297,12 @@ address {
     padding: 8px !important;
   }
 }
+.account_featured .related_card .heart .default-icon {
+  display: none !important;
+}
+.account_featured .related_card .heart .active-icon {
+  display: flex !important;
+}
 .account_right {
   width: 100%;
 }

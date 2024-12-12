@@ -359,6 +359,16 @@
           padding: 8px !important;
         }
       }
+
+      .heart {
+        .default-icon {
+          display: none !important;
+        }
+
+        .active-icon {
+          display: flex !important;
+        }
+      }
     }
   }
 
