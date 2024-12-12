@@ -27,12 +27,9 @@ const validateButton = document.getElementById("validateButton");
 const errorMessage = document.querySelector(".error-message");
 const clearIcon = document.getElementById("clearIcon");
 
-// Validate passwords
 validateButton.addEventListener("click", () => {
-  // Reset styles
   resetErrors();
 
-  // Check if passwords match
   if (password1.value !== password2.value || password1.value === "" || password2.value === "") {
     password2.classList.add("error");
     errorMessage.style.display = "flex";
@@ -40,19 +37,16 @@ validateButton.addEventListener("click", () => {
   }
 });
 
-// Clear input and reset errors
 clearIcon.addEventListener("click", () => {
   password2.value = "";
   resetErrors();
 });
 
-// Reset error styles
 function resetErrors() {
   password2.classList.remove("error");
   errorMessage.style.display = "none";
   clearIcon.style.display = "none";
 }
-
 // password
 
 // account_modal
