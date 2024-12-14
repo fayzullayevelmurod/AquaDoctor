@@ -1041,3 +1041,137 @@
     }
   }
 }
+
+.login_register {
+  padding-bottom: 48px;
+
+  @include tablet() {
+    padding-top: 76px;
+  }
+
+  .register_block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form_step {
+    max-width: 466px;
+    margin: auto;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 16px 0px #00000014;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    @include tablet() {
+      padding: 16px;
+      gap: 16px;
+    }
+
+    h6 {
+      font-family: $font-Raleway;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 38px;
+      text-align: center;
+      color: $color-dark;
+
+      &.green {
+        color: #5FBB43;
+        text-align: left;
+      }
+
+      @include tablet() {
+        font-size: 26px;
+        line-height: 34px;
+      }
+    }
+
+    .form_text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: center;
+      color: #727272;
+
+      b {
+        font-family: $font-Raleway;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #727272;
+        margin-top: 8px;
+      }
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      color: #757575;
+      margin-bottom: 4px;
+    }
+
+    .btn_medium_green {
+      padding: 19px 32px;
+      width: max-content;
+      margin: 0 auto;
+
+      @include tablet() {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: center;
+      color: #727272;
+
+      a {
+        color: $color-green-light;
+      }
+    }
+
+    .password_link {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $color-green-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+
+  .step_3, .step_4 {
+    .form_text {
+      text-align: left;
+
+      span {
+        font-weight: 700;
+      }
+
+      b {
+        display: block;
+      }
+    }
+  }
+
+  .step_5 {
+    p {
+      text-align: left;
+
+      a {
+        display: inline;
+      }
+    }
+  }
+}
