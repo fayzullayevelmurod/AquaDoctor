@@ -710,7 +710,7 @@ address {
 }
 @media (max-width: 1023px) {
   .pagination {
-    display: none;
+    margin-bottom: 40px;
   }
 }
 .pagination a {
@@ -735,6 +735,17 @@ address {
   background-color: #303030;
   color: #FFFFFF;
 }
+@media (max-width: 1023px) {
+  .pagination a:nth-child(2) {
+    display: none;
+  }
+  .pagination a:nth-child(6) {
+    display: none;
+  }
+  .pagination a:nth-child(7) {
+    display: none;
+  }
+}
 .pagination a.active {
   background-color: #303030;
   color: #FFFFFF;
@@ -745,6 +756,11 @@ address {
   line-height: 21px;
   color: #757575;
   transition: 0.3s linear;
+}
+@media (max-width: 1023px) {
+  .pagination span {
+    font-size: 14px;
+  }
 }
 .pagination .next {
   width: auto;

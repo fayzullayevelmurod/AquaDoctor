@@ -422,7 +422,7 @@ address {
   margin-bottom: 120px;
 
   @include tablet() {
-    display: none;
+    margin-bottom: 40px;
   }
 
   a {
@@ -448,6 +448,18 @@ address {
       background-color: $color-dark;
       color: $color-white;
     }
+
+    @include tablet() {
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(6) {
+        display: none;
+      }
+      &:nth-child(7) {
+        display: none;
+      }
+    }
   }
 
   a.active {
@@ -461,6 +473,10 @@ address {
     line-height: 21px;
     color: #757575;
     transition: .3s linear;
+
+    @include tablet() {
+      font-size: 14px;
+    }
   }
 
   .next {
