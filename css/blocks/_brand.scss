@@ -1,6 +1,86 @@
 .brand_home {
   background-color: $color-white;
   border-radius: 0 0 48px 48px;
+  padding: 132px 0 87px 0;
+
+  @include tablet {
+    padding: 16px 0 52px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: start;
+    gap: 142px;
+
+    @include desktop {
+      gap: 24px;
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &_right {
+    min-width: 466px;
+
+    @include tablet {
+      min-width: 100%;
+
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &_left {
+    max-width: 832px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  h3 {
+    font-family: $font-Raleway;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $color-dark;
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #727272;
+    margin: 24px 0 64px 0;
+
+    @include tablet {
+      margin: 16px 0 24px 0;
+    }
+  }
+
+  .btn_medium_green {
+    padding: 16px 32px;
+    border-radius: 24px;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 
 .brand_order {

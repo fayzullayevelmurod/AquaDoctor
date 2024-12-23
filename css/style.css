@@ -6051,6 +6051,85 @@ address {
 .brand_home {
   background-color: #FFFFFF;
   border-radius: 0 0 48px 48px;
+  padding: 132px 0 87px 0;
+}
+@media (max-width: 1023px) {
+  .brand_home {
+    padding: 16px 0 52px 0;
+  }
+}
+.brand_home .container {
+  display: flex;
+  align-items: start;
+  gap: 142px;
+}
+@media (max-width: 1200px) {
+  .brand_home .container {
+    gap: 24px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1023px) {
+  .brand_home .container {
+    flex-direction: column-reverse;
+  }
+}
+.brand_home_right {
+  min-width: 466px;
+}
+@media (max-width: 1023px) {
+  .brand_home_right {
+    min-width: 100%;
+  }
+  .brand_home_right img {
+    width: 100%;
+  }
+}
+.brand_home_left {
+  max-width: 832px;
+}
+@media (max-width: 1023px) {
+  .brand_home_left {
+    max-width: 100%;
+  }
+}
+.brand_home h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #303030;
+}
+@media (max-width: 1023px) {
+  .brand_home h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.brand_home p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+  margin: 24px 0 64px 0;
+}
+@media (max-width: 1023px) {
+  .brand_home p {
+    margin: 16px 0 24px 0;
+  }
+}
+.brand_home .btn_medium_green {
+  padding: 16px 32px;
+  border-radius: 24px;
+}
+@media (max-width: 1023px) {
+  .brand_home .btn_medium_green {
+    width: 100%;
+  }
+}
+.brand_home .btn_medium_green img {
+  width: 48px;
+  height: 48px;
 }
 
 .brand_order {
