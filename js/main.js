@@ -477,24 +477,28 @@ if (serviceItem.length) {
 // news tabs
 
 // modal
-const orderModal = document.querySelector('.order-modal');
-const orderModalOpen = document.querySelector('.order-modal__open');
-const orderModalClose = document.querySelector('.order-modal__close');
-const orderModalBg = document.querySelector('.order-modal__bg');
+document.addEventListener('DOMContentLoaded', () => {
+  const orderModal = document.querySelector('.order-modal');
+  const orderModalOpen = document.querySelector('.order-modal__open');
+  const orderModalClose = document.querySelector('.order-modal__close');
+  const orderModalBg = document.querySelector('.order-modal__bg');
 
-if (orderModalOpen) {
-  orderModalOpen.onclick = () => {
-    orderModal.classList.add('active');
-  }
+  if (orderModal && orderModalOpen && orderModalClose && orderModalBg) {
+    orderModalOpen.addEventListener('click', () => {
+      orderModal.classList.add('active');
+    });
 
-  orderModalClose.onclick = () => {
-    orderModal.classList.remove('active');
-  }
+    orderModalClose.addEventListener('click', () => {
+      orderModal.classList.remove('active');
+    });
 
-  orderModalBg.onclick = () => {
-    orderModal.classList.remove('active');
+    orderModalBg.addEventListener('click', () => {
+      orderModal.classList.remove('active');
+    });
+  } else {
+    console.warn("error");
   }
-}
+});
 // modal
 
 

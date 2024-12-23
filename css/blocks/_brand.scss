@@ -1,0 +1,153 @@
+.brand_home {
+  background-color: $color-white;
+  border-radius: 0 0 48px 48px;
+}
+
+.brand_order {
+  margin-bottom: 120px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  .order_container {
+    @include tablet {
+      gap: 24px !important;
+    }
+  }
+
+  &_left {
+
+    @include desktop-two {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      border-radius: 48px;
+    }
+  }
+
+  .order__right .form_group, .order__right .btns_wrap {
+    display: flex !important;
+  }
+
+  .order__right {
+    background: transparent;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    .btn_medium_dark {
+      display: none;
+    }
+  }
+
+  .btns_wrap {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .main_title {
+    font-size: 30px;
+    line-height: 38px;
+    color: $color-dark;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-dark !important;
+  }
+}
+
+.science {
+  border-radius: 48px;
+  background: $color-white;
+  padding: 64px 0;
+
+  @include mobile {
+    padding: 50px 0;
+    border-radius: 24px;
+  }
+
+  &_in {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include mobile {
+      gap: 24px;
+    }
+  }
+
+  &_block {
+    display: flex;
+    align-items: center;
+    gap: 264px;
+
+    &:nth-child(1) {
+      @include mobile {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @include tablet {
+      gap: 24px;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &_left,
+    &_right {
+      @include mobile {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  h6 {
+    font-family: $font-Raleway;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    color: $color-dark;
+    margin-bottom: 32px;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    li {
+      margin-left: 15px;
+      list-style-type: disc;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #727272;
+    }
+  }
+}
