@@ -6270,6 +6270,119 @@ address {
   color: #727272;
 }
 
+.brand_comfort {
+  padding: 120px 0;
+}
+@media (max-width: 767px) {
+  .brand_comfort {
+    padding: 40px 0;
+  }
+}
+.brand_comfort_in {
+  display: grid;
+  gap: 20px;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1023px) {
+  .brand_comfort_in {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .brand_comfort_in {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.brand_comfort_block_left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .brand_comfort_block_left {
+    gap: 16px;
+  }
+}
+.brand_comfort_block_left h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  color: #303030;
+}
+@media (max-width: 767px) {
+  .brand_comfort_block_left h6 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+.brand_comfort_block_left p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+}
+.brand_comfort_block_center {
+  background: linear-gradient(180deg, #55A9B9 0%, #8CC7D2 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+@media (max-width: 767px) {
+  .brand_comfort_block_center {
+    gap: 16px;
+    border-radius: 24px;
+    padding: 24px;
+  }
+}
+.brand_comfort_block_center h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .brand_comfort_block_center h6 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+.brand_comfort_block_center p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.brand_comfort_block_center .btn_medium_dark {
+  padding: 14px 24px;
+  border-radius: 16px;
+  width: 100%;
+}
+.brand_comfort_block_right img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 48px;
+  -o-object-position: right;
+     object-position: right;
+}
+@media (max-width: 480px) {
+  .brand_comfort_block_right img {
+    height: 368px;
+    border-radius: 24px;
+    -o-object-position: 70%;
+       object-position: 70%;
+  }
+}
+
 .footer {
   background-color: #3C7582;
   padding: 64px 0;
