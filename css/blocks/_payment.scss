@@ -1,0 +1,33 @@
+// payment_home
+.payment_home {
+  p {
+    max-width: 709px;
+  }
+  
+  &_btns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      height: 62px;
+    }
+
+    .btn_medium_green {
+      width: 177px;
+      border-radius: 16px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .btn_medium_dark {
+      width: 209px;
+    }
+  }
+}
+// payment_home

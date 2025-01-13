@@ -6587,6 +6587,31 @@ address {
   }
 }
 
+.payment_home p {
+  max-width: 709px;
+}
+.payment_home_btns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.payment_home_btns button {
+  display: flex;
+  justify-content: center;
+  height: 62px;
+}
+.payment_home_btns .btn_medium_green {
+  width: 177px;
+  border-radius: 16px;
+}
+.payment_home_btns .btn_medium_green img {
+  width: 24px;
+  height: 24px;
+}
+.payment_home_btns .btn_medium_dark {
+  width: 209px;
+}
+
 .footer {
   background-color: #3C7582;
   padding: 64px 0;
