@@ -6695,6 +6695,11 @@ address {
   position: relative;
   padding: 133px 0 64px 0;
 }
+@media (max-width: 1023px) {
+  .payment_shipping {
+    padding: 50px 0;
+  }
+}
 .payment_shipping_top {
   position: absolute;
   width: 100%;
@@ -6708,6 +6713,14 @@ address {
   justify-content: space-between;
   gap: 24px;
 }
+@media (max-width: 1023px) {
+  .payment_shipping_top {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
 .payment_shipping .shipping_block {
   background: #434343;
   border-radius: 32px;
@@ -6718,6 +6731,11 @@ address {
   gap: 24px;
   min-width: 224px;
 }
+@media (max-width: 1023px) {
+  .payment_shipping .shipping_block {
+    width: 223px;
+  }
+}
 .payment_shipping .shipping_block span {
   font-size: 18px;
   line-height: 21px;
@@ -6727,6 +6745,280 @@ address {
 .payment_shipping .main_title {
   text-align: center;
   margin-bottom: 48px;
+}
+@media (max-width: 1023px) {
+  .payment_shipping .main_title {
+    margin-bottom: 20px;
+  }
+}
+.payment_shipping .payment_shipping_texts {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+@media (max-width: 1023px) {
+  .payment_shipping .payment_shipping_texts {
+    flex-direction: column;
+  }
+}
+.payment_shipping .payment_shipping_texts_left {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 20px;
+}
+.payment_shipping .payment_shipping_texts_left .payment_shipping_text {
+  height: 100%;
+}
+.payment_shipping .payment_shipping_texts_left .payment_shipping_text p {
+  margin-top: 8px;
+}
+.payment_shipping .payment_shipping_texts_right {
+  width: 464px;
+}
+@media (max-width: 1023px) {
+  .payment_shipping .payment_shipping_texts_right {
+    width: 100%;
+  }
+}
+.payment_shipping .payment_shipping_texts_right .payment_shipping_text {
+  height: 100%;
+}
+.payment_shipping .payment_shipping_texts_right .payment_shipping_text p {
+  margin-bottom: 8px;
+}
+.payment_shipping .payment_shipping_text {
+  height: 100%;
+  padding: 32px;
+  border-radius: 48px;
+  background: #FFFFFF;
+}
+@media (max-width: 1023px) {
+  .payment_shipping .payment_shipping_text {
+    border-radius: 24px;
+    padding: 16px;
+  }
+}
+.payment_shipping .payment_shipping_text h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #303030;
+  border-bottom: 1px solid #EEEFF0;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+}
+@media (max-width: 1023px) {
+  .payment_shipping .payment_shipping_text h6 {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+.payment_shipping .payment_shipping_text p,
+.payment_shipping .payment_shipping_text b,
+.payment_shipping .payment_shipping_text span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+}
+.payment_shipping .payment_shipping_text b {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+@media (max-width: 1023px) {
+  .payment_shipping .payment_shipping_text b {
+    font-size: 18px;
+  }
+}
+.payment_shipping .payment_shipping_text span {
+  display: block;
+  color: #7EA479;
+}
+
+.order_pay {
+  padding: 64px 0;
+  background: #FFFFFF;
+  border-radius: 48px;
+}
+@media (max-width: 1023px) {
+  .order_pay {
+    padding: 24px 0;
+    border-radius: 24px;
+  }
+}
+.order_pay .main_title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+@media (max-width: 1023px) {
+  .order_pay .main_title {
+    margin-bottom: 24px;
+  }
+}
+.order_pay_in {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1023px) {
+  .order_pay_in {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.order_pay_block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 48px;
+  border: 1px dashed #7EA479;
+}
+@media (max-width: 1023px) {
+  .order_pay_block {
+    border-radius: 12px;
+    padding: 16px;
+  }
+}
+.order_pay h6 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #7EA479;
+  border-bottom: 1px solid #EEEFF0;
+}
+@media (max-width: 1023px) {
+  .order_pay h6 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+.order_pay h6 svg {
+  flex-shrink: 0;
+}
+.order_pay p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+}
+.order_pay b {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #727272;
+  margin-bottom: 8px;
+}
+
+.payment_product {
+  padding: 64px 0 120px 0;
+}
+@media (max-width: 1023px) {
+  .payment_product {
+    padding: 50px 0;
+  }
+}
+.payment_product .main_title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.payment_product h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #303030;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #EEEFF0;
+}
+@media (max-width: 1023px) {
+  .payment_product h6 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 1023px) {
+  .payment_product h6 svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+.payment_product p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #727272;
+  margin-top: 8px;
+}
+.payment_product p a {
+  color: #7EA479;
+}
+.payment_product_blocks {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1023px) {
+  .payment_product_blocks {
+    gap: 22px;
+    margin-bottom: 22px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.payment_product_block {
+  background: #FFFFFF;
+  border-radius: 48px;
+  padding: 32px;
+}
+@media (max-width: 1023px) {
+  .payment_product_block {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+.payment_product_bottom {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  background: #FFFFFF;
+  border-radius: 48px;
+  padding: 32px;
+  border: 1px solid #7EA479;
+}
+@media (max-width: 1023px) {
+  .payment_product_bottom {
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  .payment_product_bottom h6 {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+.payment_product_bottom img {
+  flex-shrink: 0;
+}
+@media (max-width: 1023px) {
+  .payment_product_bottom img {
+    width: 63px;
+    height: 63px;
+  }
 }
 
 .payment_bottom {

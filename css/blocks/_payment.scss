@@ -115,6 +115,10 @@
   position: relative;
   padding: 133px 0 64px 0;
 
+  @include tablet() {
+    padding: 50px 0;
+  }
+
   &_top {
     position: absolute;
     width: 100%;
@@ -127,6 +131,13 @@
     align-items: stretch;
     justify-content: space-between;
     gap: 24px;
+
+    @include tablet() {
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+    }
   }
 
   .shipping_block {
@@ -139,6 +150,10 @@
     gap: 24px;
     min-width: 224px;
 
+    @include tablet() {
+      width: 223px;
+    }
+
     span {
       font-size: 18px;
       line-height: 21px;
@@ -150,9 +165,299 @@
   .main_title {
     text-align: center;
     margin-bottom: 48px;
+
+    @include tablet() {
+      margin-bottom: 20px;
+    }
+  }
+
+  .payment_shipping_texts {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+
+    @include tablet() {
+      flex-direction: column;
+    }
+  }
+
+  .payment_shipping_texts_left {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+
+    .payment_shipping_text {
+      height: 100%;
+
+      p {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .payment_shipping_texts_right {
+    width: 464px;
+
+    @include tablet() {
+      width: 100%;
+    }
+
+    .payment_shipping_text {
+      height: 100%;
+
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .payment_shipping_text {
+    height: 100%;
+    padding: 32px;
+    border-radius: 48px;
+    background: $color-white;
+
+    @include tablet() {
+      border-radius: 24px;
+      padding: 16px;
+    }
+
+    h6 {
+      font-family: $font-Raleway;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+      color: #303030;
+      border-bottom: 1px solid #EEEFF0;
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+
+      @include tablet() {
+        margin-bottom: 14px;
+        padding-bottom: 14px;
+        font-size: 19px;
+        line-height: 26px;
+      }
+    }
+
+    p,
+    b,
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #727272;
+    }
+
+    b {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+
+      @include tablet() {
+        font-size: 18px;
+      }
+    }
+
+    span {
+      display: block;
+      color: $color-green-light;
+    }
   }
 }
 // payment_shipping
+
+// order_pay
+.order_pay {
+  padding: 64px 0;
+  background: $color-white;
+  border-radius: 48px;
+
+  @include tablet() {
+    padding: 24px 0;
+    border-radius: 24px;
+  }
+
+  .main_title {
+    text-align: center;
+    margin-bottom: 48px;
+
+    @include tablet() {
+      margin-bottom: 24px;
+    }
+  }
+
+  &_in {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet() {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &_block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 48px;
+    border: 1px dashed $color-green-light;
+
+    @include tablet() {
+      border-radius: 12px;
+      padding: 16px;
+    }
+  }
+
+  h6 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: $font-Raleway;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 26px;
+    color: $color-green-light;
+    border-bottom: 1px solid #EEEFF0;
+
+    @include tablet() {
+      font-size: 19px;
+      line-height: 26px;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #727272;
+  }
+
+  b {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #727272;
+    margin-bottom: 8px;
+  }
+}
+// order_pay
+
+// payment_product
+.payment_product {
+  padding: 64px 0 120px 0;
+
+  @include tablet() {
+    padding: 50px 0;
+  }
+
+  .main_title {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  h6 {
+    font-family: $font-Raleway;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #303030;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #EEEFF0;
+
+    @include tablet() {
+      font-size: 19px;
+      line-height: 26px;
+    }
+
+    svg {
+      @include tablet() {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #727272;
+    margin-top: 8px;
+
+    a {
+      color: $color-green-light;
+    }
+  }
+
+  &_blocks {
+    margin-bottom: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include tablet() {
+      gap: 22px;
+      margin-bottom: 22px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &_block {
+    background: $color-white;
+    border-radius: 48px;
+    padding: 32px;
+
+    @include tablet() {
+      padding: 16px;
+      border-radius: 16px;
+    }
+  }
+
+  &_bottom {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    background: $color-white;
+    border-radius: 48px;
+    padding: 32px;
+    border: 1px solid $color-green-light;
+
+    @include tablet() {
+      flex-direction: column;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+    h6 {
+      @include tablet() {
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    img {
+      flex-shrink: 0;
+
+      @include tablet() {
+        width: 63px;
+        height: 63px;
+      }
+    }
+  }
+}
+// payment_product
 
 // payment_bottom
 .payment_bottom {
