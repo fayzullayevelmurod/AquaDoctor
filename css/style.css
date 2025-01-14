@@ -6590,6 +6590,11 @@ address {
 .payment_home {
   padding: 119px 0 243px 0;
 }
+@media (max-width: 1023px) {
+  .payment_home {
+    padding: 16px 0 52px 0;
+  }
+}
 .payment_home .container {
   position: relative;
 }
@@ -6669,7 +6674,7 @@ address {
 }
 @media (max-width: 480px) {
   .payment_home .payment_media {
-    display: block;
+    display: none;
     transform: translateX(20px);
   }
 }
@@ -6683,11 +6688,6 @@ address {
     position: relative;
     top: 16px;
     right: 0;
-  }
-}
-@media (max-width: 480px) {
-  .payment_home .payment_home_img {
-    display: none;
   }
 }
 

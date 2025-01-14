@@ -2,6 +2,10 @@
 .payment_home {
   padding: 119px 0 243px 0;
 
+  @include tablet() {
+    padding: 16px 0 52px 0;
+  }
+
   .container {
     position: relative;
 
@@ -87,7 +91,7 @@
     display: none;
 
     @include mobile-s() {
-      display: block;
+      display: none;
       transform: translateX(20px);
     }
   }
@@ -103,9 +107,9 @@
       right: 0;
     }
 
-    @include mobile-s() {
-      display: none;
-    }
+    // @include mobile-s() {
+    //   display: none;
+    // }
   }
 }
 // payment_home
