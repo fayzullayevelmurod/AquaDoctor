@@ -3,7 +3,7 @@
   padding: 119px 0 243px 0;
 
   @include tablet() {
-    padding: 16px 0 52px 0;
+    padding: 0 0 52px 0;
   }
 
   .container {
@@ -90,7 +90,7 @@
   .payment_media {
     display: none;
 
-    @include mobile-s() {
+    @include mobile() {
       display: none;
       transform: translateX(20px);
     }
@@ -105,6 +105,10 @@
       position: relative;
       top: 16px;
       right: 0;
+    }
+
+    @include mobile-s() {
+      margin-bottom: 30px;
     }
 
     // @include mobile-s() {

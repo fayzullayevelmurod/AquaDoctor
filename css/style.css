@@ -6592,7 +6592,7 @@ address {
 }
 @media (max-width: 1023px) {
   .payment_home {
-    padding: 16px 0 52px 0;
+    padding: 0 0 52px 0;
   }
 }
 .payment_home .container {
@@ -6672,7 +6672,7 @@ address {
 .payment_home .payment_media {
   display: none;
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .payment_home .payment_media {
     display: none;
     transform: translateX(20px);
@@ -6688,6 +6688,11 @@ address {
     position: relative;
     top: 16px;
     right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .payment_home .payment_home_img {
+    margin-bottom: 30px;
   }
 }
 
